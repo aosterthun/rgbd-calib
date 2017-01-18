@@ -33,3 +33,4 @@ install
 *.poses
 *.cv_samples
 
+.DS_Store
