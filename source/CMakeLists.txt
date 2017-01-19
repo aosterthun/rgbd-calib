@@ -90,6 +90,10 @@ add_executable(voxelizer voxelizer.cpp)
 target_link_libraries(voxelizer framework)
 install(TARGETS voxelizer DESTINATION bin)
 
+add_executable(kinect_daemon kinect_daemon.cpp)
+target_link_libraries(kinect_daemon framework)
+install(TARGETS kinect_daemon DESTINATION bin)
+
 #install(DIRECTORY . DESTINATION bin FILES_MATCHING PATTERN "poseoffset")
 #install(DIRECTORY . DESTINATION bin FILES_MATCHING PATTERN "click_x.wav")
 
