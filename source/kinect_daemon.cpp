@@ -1,10 +1,12 @@
 #include <zmq.hpp>
 #include <iostream>
-#include <CMDParser.hpp>
-#include <FileBuffer.hpp>
-#include <ChronoMeter.hpp>
-
 #include <boost/thread/thread.hpp>
+
+#include "CMDParser.hpp"
+#include "FileBuffer.hpp"
+#include "ChronoMeter.hpp"
+#include "timevalue.hpp"
+#include "clock.hpp"
 
 
 bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed) {
@@ -21,26 +23,39 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 	}
 	fb.setLooping(true);
 	zmq::context_t ctx(1); // means single threaded
-  	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
+	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
 	uint32_t hwm = 1;
-  	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
-  	std::string endpoint("tcp://127.0.0.1:7001");
-  	socket.bind(endpoint.c_str());
+	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
+	std::string endpoint("tcp://127.0.0.1:7000");
+	socket.bind(endpoint.c_str());
 
-  	while(true){
-	    zmq::message_t zmqm(framesize);
+	sensor::timevalue ts(sensor::clock::time());
 
-	    unsigned offset = 0;
-	    for(unsigned i = 0; i < num_kinect_cameras; ++i){
-	      fb.read((unsigned char*) zmqm.data() + offset, colorsize);
-	      offset += colorsize;
-	      fb.read((unsigned char*) zmqm.data() + offset, depthsize);
-	      offset += depthsize;
-	    }
 
-	    // send frames
-	    socket.send(zmqm);
-	  }
+	while(true){
+		zmq::message_t zmqm(framesize);
+
+		unsigned offset = 0;
+		for(unsigned i = 0; i < num_kinect_cameras; ++i){
+			fb.read((unsigned char*) zmqm.data() + offset, colorsize);
+			offset += colorsize;
+			fb.read((unsigned char*) zmqm.data() + offset, depthsize);
+			offset += depthsize;
+		}
+
+		// send frames
+		socket.send(zmqm);
+
+		// check if fps is correct
+		sensor::timevalue ts_now = sensor::clock::time();
+		long long time_spent_ns = (ts_now - ts).nsec();
+		long long rest_sleep_ns = min_frame_time_ns - time_spent_ns;
+		ts = ts_now;
+		if(0 < rest_sleep_ns){
+			sensor::timevalue rest_sleep(0,rest_sleep_ns);
+			nanosleep(rest_sleep);
+		}
+	}
 
 	return true;
 }
@@ -52,9 +67,6 @@ bool play(std::string const filename) {
 
 bool record(std::string const record_to_this_filename, std::string const serverport, unsigned const num_kinect_cameras,
 	float const num_seconds_to_record, bool const rgb_is_compressed) {
-	/*
-	*	TODO: run this in a separate thread !
-	*/
 
 	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
 	const unsigned depthsize = 512 * 424 * sizeof(float);
@@ -74,15 +86,22 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
 
+	const unsigned timeout = 100;
+	// socket.setsockopt(ZMQ_RCVTIMEO, timeout); // wait for n milliseconds before timeout
+
 	std::string endpoint("tcp://" + serverport);
 	socket.connect(endpoint.c_str());
 
+
 	ChronoMeter cm;
 	const double starttime = cm.getTick();
+
 	bool running = true;
 	while(running){
 		zmq::message_t zmqm(framesize);
+
 		socket.recv(&zmqm); // blocking
+
 		const double currtime = cm.getTick();
 		const double elapsed = currtime - starttime;
 
@@ -104,24 +123,44 @@ int main(int argc, char* argv[])
 	CMDParser p("serverport");
 	p.init(argc,argv);
 
-	record("/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 1, 1, true);
+	// record("/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
+	// play("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream");
 
 	zmq::context_t ctx(1); // means single threaded
-	zmq::socket_t  socket(ctx, ZMQ_SUB); // means a 	subscriber
+	zmq::socket_t  socket(ctx, ZMQ_SUB); // means a subscriber
 	socket.setsockopt(ZMQ_SUBSCRIBE, "", 0);
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
 	std::string connection_socket = "tcp://" + p.getArgs()[0];
 	socket.connect(connection_socket.c_str());
-	float cmd_id;
-  	while(true){
+
+	bool is_recording = false;
+
+	// replace with message interface
+	int cmd_id;
+	while(true){
 		zmq::message_t zmqm(sizeof(float));
 		socket.recv(&zmqm);
-    	memcpy( &cmd_id, (const unsigned char*) zmqm.data(), sizeof(float));
-    	if (cmd_id == 5.0f) {
-    		play("/opt/socialvr/recordings/Jojo/idiot.stream");
-    	}
-    	std::cout << cmd_id << std::endl;
+		std::cout << "Received command." << std::endl;
+		memcpy( &cmd_id, (const unsigned char*) zmqm.data(), sizeof(float));
+
+		switch(cmd_id) {
+			case 1: {
+				play("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream");
+				break;
+			}
+
+			case 2: {
+				if (!is_recording) {
+					boost::thread th(record,
+						"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
+					is_recording = true;
+				}
+				break;
+			}
+		}
+
+		std::cout << cmd_id << std::endl;
   	}
 
 	return 0;

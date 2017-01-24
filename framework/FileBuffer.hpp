@@ -16,8 +16,10 @@
     ~FileBuffer();
 
     bool isOpen();
-	
+
     bool open(const char* mode = "a+", unsigned long long buffersize = 0);
+    bool openRange(const char* mode = "a+", unsigned framesize = 0, unsigned first = 1, unsigned last = 2);
+
     unsigned calcNumFrames(unsigned long long framesize);
     void close();
 
@@ -25,13 +27,13 @@
 
     void setLooping(bool onoff);
     bool getLooping();
-		  
+
     unsigned long long read (void* buffer, unsigned long long numbytes);
     unsigned long long write(void* buffer, unsigned long long numbytes);
 
     unsigned long long numBytesR() const;
     unsigned long long numBytesW() const;
-	  
+
   private:
     std::string m_path;
     FILE*     m_file;

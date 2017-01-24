@@ -1,6 +1,6 @@
 #include "FileBuffer.hpp"
 
-
+#include <cstdio>
 #include <iostream>
 /*
 
@@ -27,7 +27,7 @@ The default streams stdin and stdout are fully buffered by default if they are k
 
 A call to this function is equivalent to calling setvbuf with _IOFBF as mode and BUFSIZ as size (when buffer is not a null pointer), or equivalent to calling it with _IONBF as mode (when it is a null pointer).
 */
-	
+
   FileBuffer::FileBuffer(const char* path)
     : m_path(path),
       m_file(0),
@@ -50,12 +50,12 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
   FileBuffer::isOpen(){
     return m_file != 0;
   }
-	
+
   bool
   FileBuffer::open(const char* mode, unsigned long long buffersize){
 
     m_file = fopen(m_path.c_str(), mode);
-    if(lstat(m_path.c_str(),&m_fstat) < 0)    
+    if(lstat(m_path.c_str(),&m_fstat) < 0)
       return false;
     if(0 == m_file)
       return false;
@@ -64,7 +64,33 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
       m_buffer = new char [buffersize];
       setvbuf (m_file, m_buffer, _IOFBF, buffersize);
     }
-  
+
+    std::cerr << "FileBuffer " << this << " opening " << m_path << std::endl;
+    return true;
+  }
+
+  bool
+  FileBuffer::openRange(const char* mode, unsigned framesize, unsigned first, unsigned last){
+
+    unsigned first_byte = first * framesize;
+    unsigned last_byte = last * framesize;
+    unsigned buffersize = last_byte - first_byte;
+    unsigned num_frames = this->calcNumFrames(buffersize);
+
+    FILE* tmp_file = fopen(m_path.c_str(), mode);
+    if(lstat(m_path.c_str(),&m_fstat) < 0)
+      return false;
+    if(0 == m_file)
+      return false;
+
+    fseek(tmp_file, first_byte, SEEK_SET);
+    fwrite(tmp_file, 1, num_frames, m_file);
+
+    if(0 != buffersize){
+      m_buffer = new char [buffersize];
+      setvbuf (m_file, m_buffer, _IOFBF, buffersize);
+    }
+
     std::cerr << "FileBuffer " << this << " opening " << m_path << std::endl;
     return true;
   }
@@ -90,7 +116,6 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
       m_bytes_w = 0;
     }
   }
-  
 
   void
   FileBuffer::setLooping(bool onoff){
@@ -102,7 +127,7 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
     return m_looping;
   }
 
-  
+
   unsigned long long
   FileBuffer::read (void* buffer, unsigned long long numbytes){
     if(0 == m_file)
@@ -110,12 +135,12 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
 
     if((m_bytes_r + numbytes) > m_fstat.st_size){
       if(m_looping){
-	std::cerr << "FileBuffer " << this << " rewinding " << m_path << " filesize is " << m_fstat.st_size << std::endl;
-	rewind(m_file);
-	m_bytes_r = 0;
+        std::cerr << "FileBuffer " << this << " rewinding " << m_path << " filesize is " << m_fstat.st_size << std::endl;
+        rewind(m_file);
+        m_bytes_r = 0;
       }
       else{
-	return 0;
+        return 0;
       }
     }
 
@@ -124,8 +149,8 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
 
     return bytes;
   }
-  
-  unsigned long long 
+
+  unsigned long long
   FileBuffer::write(void* buffer, unsigned long long numbytes){
     if(0 == m_file)
       return 0;
@@ -133,7 +158,7 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
     m_bytes_w += bytes;
     return bytes;
   }
-  
+
   unsigned long long
   FileBuffer::numBytesR() const{
     return m_bytes_r;
@@ -143,4 +168,4 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
   FileBuffer::numBytesW() const{
     return m_bytes_w;
   }
-  
+
