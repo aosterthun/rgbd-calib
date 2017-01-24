@@ -167,6 +167,33 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 }
 
 
+bool play_record_in_sync(const std::string filename, const std::string rec_serverport, const std::string output_file, const int num_loops) {
+	/*
+	UNFINISHED
+	Plays a recording num_loops times and records from rec_serverport on the last loop.
+	*/
+
+	unsigned length_recording = 0;
+
+	struct stat stat_buf;
+	int filesize = stat(filename.c_str(), &stat_buf);
+	filesize == 0 ? stat_buf.st_size : -1;
+
+
+	for (int i = 0; i < num_loops-1; ++i) {
+		play(filename);
+		std::cout << "Looping play.. " << i << std::endl;
+	}
+
+	std::cout << "RECORDING from " << rec_serverport << " to: " << output_file << std::endl;
+	boost::thread th(record,
+		"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
+	play(filename);
+
+	return true;
+}
+
+
 int main(int argc, char* argv[])
 {
 	CMDParser p("serverport");
@@ -201,7 +228,7 @@ int main(int argc, char* argv[])
 			}
 
 			case 2: {
-				boost::thread th(record,
+				boost::thread* th = new boost::thread(record,
 					"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
 				thg.add_thread(th);
 				break;
