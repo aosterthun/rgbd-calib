@@ -7,6 +7,7 @@
 #include "ChronoMeter.hpp"
 #include "timevalue.hpp"
 #include "clock.hpp"
+#include "zmq_messages.hpp"
 
 
 bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed) {
@@ -22,6 +23,7 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 		return 1;
 	}
 	fb.setLooping(true);
+
 	zmq::context_t ctx(1); // means single threaded
 	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
 	uint32_t hwm = 1;
@@ -65,6 +67,56 @@ bool play(std::string const filename) {
 	return play(filename, 4, 20.0, false);
 }
 
+
+bool play_segment(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed,
+	unsigned const first_frame, unsigned const last_frame) {
+
+	unsigned min_frame_time_ns = 1000000000/max_fps;
+
+	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
+	const unsigned depthsize = 512 * 424 * sizeof(float);
+	const unsigned framesize = (colorsize + depthsize) * num_kinect_cameras;
+	const unsigned num_frames = (last_frame - first_frame +1);
+	const unsigned bytesize = num_frames * framesize;
+
+	FileBuffer fb(filename.c_str());
+	if(!fb.openRange("r", bytesize, framesize, first_frame, last_frame)){
+		std::cerr << "error opening " << filename << " exiting..." << std::endl;
+		return 1;
+	}
+	fb.setLooping(false);
+
+	zmq::context_t ctx(1); // means single threaded
+	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
+	uint32_t hwm = 1;
+	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
+	std::string endpoint("tcp://127.0.0.1:7000");
+	socket.bind(endpoint.c_str());
+
+	sensor::timevalue ts(sensor::clock::time());
+
+	for (int i = 0; i < num_frames; ++i) {
+		zmq::message_t zmqm(framesize);
+		fb.read((unsigned char*) zmqm.data(), framesize);
+
+		// send frame
+		socket.send(zmqm);
+
+		// check if fps is correct
+		sensor::timevalue ts_now = sensor::clock::time();
+		long long time_spent_ns = (ts_now - ts).nsec();
+		long long rest_sleep_ns = min_frame_time_ns - time_spent_ns;
+		ts = ts_now;
+		if(0 < rest_sleep_ns){
+			sensor::timevalue rest_sleep(0,rest_sleep_ns);
+			nanosleep(rest_sleep);
+		}
+	}
+
+
+	return true;
+}
+
 bool record(std::string const record_to_this_filename, std::string const serverport, unsigned const num_kinect_cameras,
 	float const num_seconds_to_record, bool const rgb_is_compressed) {
 
@@ -85,9 +137,6 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
-
-	const unsigned timeout = 100;
-	// socket.setsockopt(ZMQ_RCVTIMEO, timeout); // wait for n milliseconds before timeout
 
 	std::string endpoint("tcp://" + serverport);
 	socket.connect(endpoint.c_str());
@@ -125,6 +174,7 @@ int main(int argc, char* argv[])
 
 	// record("/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
 	// play("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream");
+	// play_segment("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream", 4, 20, true, 20*5, 20*8);
 
 	zmq::context_t ctx(1); // means single threaded
 	zmq::socket_t  socket(ctx, ZMQ_SUB); // means a subscriber
@@ -134,7 +184,7 @@ int main(int argc, char* argv[])
 	std::string connection_socket = "tcp://" + p.getArgs()[0];
 	socket.connect(connection_socket.c_str());
 
-	bool is_recording = false;
+	boost::thread_group thg;
 
 	// replace with message interface
 	int cmd_id;
@@ -151,17 +201,22 @@ int main(int argc, char* argv[])
 			}
 
 			case 2: {
-				if (!is_recording) {
-					boost::thread th(record,
-						"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
-					is_recording = true;
-				}
+				boost::thread th(record,
+					"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
+				thg.add_thread(th);
+				break;
+			}
+
+			case 3: {
+				play_segment("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream", 4, 20, true, 20*5, 20*8);
 				break;
 			}
 		}
 
 		std::cout << cmd_id << std::endl;
-  	}
+	}
+
+
 
 	return 0;
 }

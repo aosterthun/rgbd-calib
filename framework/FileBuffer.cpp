@@ -55,6 +55,8 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
   FileBuffer::open(const char* mode, unsigned long long buffersize){
 
     m_file = fopen(m_path.c_str(), mode);
+
+    // writes file info into m_fstat:
     if(lstat(m_path.c_str(),&m_fstat) < 0)
       return false;
     if(0 == m_file)
@@ -70,31 +72,27 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
   }
 
   bool
-  FileBuffer::openRange(const char* mode, unsigned framesize, unsigned first, unsigned last){
+  FileBuffer::openRange(const char* mode, unsigned long long buffersize, unsigned framesize, unsigned first, unsigned last){
+    m_file = fopen(m_path.c_str(), mode);
+    unsigned long long first_byte = first * framesize;
 
-    unsigned first_byte = first * framesize;
-    unsigned last_byte = last * framesize;
-    unsigned buffersize = last_byte - first_byte;
-    unsigned num_frames = this->calcNumFrames(buffersize);
+    m_bytes_r = first_byte;
 
-    FILE* tmp_file = fopen(m_path.c_str(), mode);
+    // writes file info into m_fstat:
     if(lstat(m_path.c_str(),&m_fstat) < 0)
       return false;
     if(0 == m_file)
       return false;
-
-    fseek(tmp_file, first_byte, SEEK_SET);
-    fwrite(tmp_file, 1, num_frames, m_file);
 
     if(0 != buffersize){
       m_buffer = new char [buffersize];
       setvbuf (m_file, m_buffer, _IOFBF, buffersize);
     }
 
-    std::cerr << "FileBuffer " << this << " opening " << m_path << std::endl;
+    fseek(m_file, first*framesize, SEEK_SET);
+
     return true;
   }
-
 
   unsigned
   FileBuffer::calcNumFrames(unsigned long long framesize){
@@ -129,7 +127,7 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
 
 
   unsigned long long
-  FileBuffer::read (void* buffer, unsigned long long numbytes){
+  FileBuffer::read(void* buffer, unsigned long long numbytes){
     if(0 == m_file)
       return 0;
 

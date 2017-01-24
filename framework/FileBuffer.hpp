@@ -18,7 +18,7 @@
     bool isOpen();
 
     bool open(const char* mode = "a+", unsigned long long buffersize = 0);
-    bool openRange(const char* mode = "a+", unsigned framesize = 0, unsigned first = 1, unsigned last = 2);
+    bool openRange(const char* mode, unsigned long long buffersize, unsigned framesize, unsigned first, unsigned last);
 
     unsigned calcNumFrames(unsigned long long framesize);
     void close();
