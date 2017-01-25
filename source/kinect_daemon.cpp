@@ -1,6 +1,7 @@
 #include <sys/stat.h>
 #include <zmq.hpp>
 #include <iostream>
+#include <vector>
 #include <boost/thread/thread.hpp>
 
 #include "CMDParser.hpp"
@@ -8,7 +9,7 @@
 #include "ChronoMeter.hpp"
 #include "timevalue.hpp"
 #include "clock.hpp"
-#include "zmq_messages.hpp"
+#include "zmq_messages.cpp"
 
 
 bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed, bool const loop = true) {
@@ -239,9 +240,28 @@ int main(int argc, char* argv[])
 	// replace with message interface
 	boost::thread_group thg;
 	int cmd_id;
-	while(true){
-		zmq::message_t zmqm(531);
-		socket.recv(&zmqm);
+	while(true){		
+		zmq::message_t zmqm;		
+		while(true){
+			socket.recv(&zmqm);
+			int64_t more = 0;
+			size_t more_size = sizeof(more);
+			socket.getsockopt(ZMQ_RCVMORE, &more, &more_size);
+			pykinecting::Message_Type mtype;
+			if(more){
+				char type[3];
+				memcpy(&type, zmqm.data(), 3);
+				int test = atoi(type);
+				mtype = static_cast<pykinecting::Message_Type>(test);
+			}else{
+				std::vector<std::string> resolvedRequest = pykinecting::resolveResponse(mtype, &zmqm);
+				for (auto i : resolvedRequest){
+					std::cout << i << std::endl;
+				}
+				break;
+			}
+		}
+		/*socket.recv(&zmqm);
 		std::cout << "Received command." << std::endl;
 		std::string responseString;
 		char responseArray[531-4];
@@ -266,7 +286,7 @@ int main(int argc, char* argv[])
 				break;
 			}
 
-		}
+		}*/
 
 		//std::cout << cmd_id << std::endl;
 	}
