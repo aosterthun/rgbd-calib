@@ -142,7 +142,7 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 	const unsigned framesize = (colorsize + depthsize) * num_kinect_cameras;
 
 	FileBuffer fb(record_to_this_filename.c_str());
-	if(!fb.open("w")){
+	if(!fb.open("w", 0)){
 		std::cerr << "error opening " << record_to_this_filename << " exiting..." << std::endl;
 		return 1;
 	}
@@ -255,6 +255,8 @@ int main(int argc, char* argv[])
 				char type[3];
 				memcpy(&type, zmqm.data(), 3);
 				int test = atoi(type);
+				std::cout << type << std::endl;
+				std::cout << test << std::endl;
 				mtype = static_cast<pykinecting::Message_Type>(test);
 			}else{
 				resolvedRequest = pykinecting::resolveResponse(mtype, &zmqm);
@@ -280,21 +282,31 @@ int main(int argc, char* argv[])
 					/* first_frame = */std::stoi(resolvedRequest.at(2)),
 					/* last_frame = */std::stoi(resolvedRequest.at(3)));
 				break;
-/*
-record(std::string const record_to_this_filename, std::string const serverport, unsigned const num_kinect_cameras,
-	float const num_seconds_to_record, bool const rgb_is_compressed
-*/
+
 			case pykinecting::RECORD:
 				std::cout << "INFO: Recording started" << std::endl;
+				std::cout << resolvedRequest.at(1) << std::endl;
+				std::cout << resolvedRequest.at(2) << std::endl;
+				std::cout << resolvedRequest.at(3) << std::endl;
+				std::cout << resolvedRequest.at(4) << std::endl;
+				std::cout << resolvedRequest.at(5) << std::endl;
 				record(
 					/* record_to_this_filename = */resolvedRequest.at(1),
 					/* serverport = */resolvedRequest.at(2),
 					/* num_kinect_cameras = */std::stoi(resolvedRequest.at(3)),
-					/* num_seconds_to_record = */std::stof(resolvedRequest.at(4)),
+					/* num_seconds_to_record = */(float)(std::stoi(resolvedRequest.at(4))),
 					/* rgb_is_compressed = */STR_BOOL(resolvedRequest.at(5)));
 				break;
 
 			case pykinecting::RECORD_PLAY:
+				play_record_in_sync(
+					/* filename = */resolvedRequest.at(1),
+					/* rec_serverport = */"141.54.147.33:7000",
+					/* output_file = */resolvedRequest.at(4),
+					/* num_loops = */5,
+					/* num_kinect_cameras = */std::stoi(resolvedRequest.at(5)),
+					/* rgb_is_comressed = */true
+					);
 				break;
 
 			case pykinecting::RESPONSE:
