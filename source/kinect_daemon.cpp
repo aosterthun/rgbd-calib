@@ -241,26 +241,37 @@ int main(int argc, char* argv[])
 	boost::thread_group thg;
 	int cmd_id;
 	while(true){		
-		zmq::message_t zmqm;		
+		zmq::message_t zmqm;
+		std::vector<std::string> resolvedRequest{};
+		pykinecting::Message_Type mtype;
 		while(true){
 			socket.recv(&zmqm);
 			int64_t more = 0;
 			size_t more_size = sizeof(more);
 			socket.getsockopt(ZMQ_RCVMORE, &more, &more_size);
-			pykinecting::Message_Type mtype;
 			if(more){
 				char type[3];
 				memcpy(&type, zmqm.data(), 3);
 				int test = atoi(type);
 				mtype = static_cast<pykinecting::Message_Type>(test);
 			}else{
-				std::vector<std::string> resolvedRequest = pykinecting::resolveResponse(mtype, &zmqm);
+				resolvedRequest = pykinecting::resolveResponse(mtype, &zmqm);
 				for (auto i : resolvedRequest){
 					std::cout << i << std::endl;
 				}
 				break;
 			}
 		}
+
+		switch(mtype) {
+			case pykinecting::PLAY: 
+				std::cout << "I want to play!" << std::endl;
+				play(resolvedRequest.at(1));
+				break;
+		}
+
+
+
 		/*socket.recv(&zmqm);
 		std::cout << "Received command." << std::endl;
 		std::string responseString;
