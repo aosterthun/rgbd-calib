@@ -1,3 +1,4 @@
+#include <sys/stat.h>
 #include <zmq.hpp>
 #include <iostream>
 #include <boost/thread/thread.hpp>
@@ -10,19 +11,25 @@
 #include "zmq_messages.hpp"
 
 
-bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed) {
+bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed, bool const loop = true) {
 	unsigned min_frame_time_ns = 1000000000/max_fps;
 
 	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
 	const unsigned depthsize = 512 * 424 * sizeof(float);
 	const unsigned framesize = (colorsize + depthsize) * num_kinect_cameras;
 
+	struct stat stat_buf;
+	stat(filename.c_str(), &stat_buf);
+
+	const float length_recording = (float)stat_buf.st_size / ((float)framesize * 20.0f);
+
+
 	FileBuffer fb(filename.c_str());
 	if(!fb.open("r")){
 		std::cerr << "error opening " << filename << " exiting..." << std::endl;
 		return 1;
 	}
-	fb.setLooping(true);
+	fb.setLooping(loop);
 
 	zmq::context_t ctx(1); // means single threaded
 	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
@@ -34,7 +41,11 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 	sensor::timevalue ts(sensor::clock::time());
 
 
-	while(true){
+	ChronoMeter cm;
+	const double starttime = cm.getTick();
+
+	bool running = true;
+	while(running){
 		zmq::message_t zmqm(framesize);
 
 		unsigned offset = 0;
@@ -47,6 +58,11 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 
 		// send frames
 		socket.send(zmqm);
+
+		const double currtime = cm.getTick();
+		const double elapsed = currtime - starttime;
+
+		if(!loop && elapsed > length_recording) { running = false; }
 
 		// check if fps is correct
 		sensor::timevalue ts_now = sensor::clock::time();
@@ -113,9 +129,9 @@ bool play_segment(std::string const filename, unsigned const num_kinect_cameras,
 		}
 	}
 
-
 	return true;
 }
+
 
 bool record(std::string const record_to_this_filename, std::string const serverport, unsigned const num_kinect_cameras,
 	float const num_seconds_to_record, bool const rgb_is_compressed) {
@@ -167,28 +183,35 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 }
 
 
-bool play_record_in_sync(const std::string filename, const std::string rec_serverport, const std::string output_file, const int num_loops) {
+bool play_record_in_sync(const std::string filename, const std::string rec_serverport, const std::string output_file,
+	const int num_loops, unsigned const num_kinect_cameras, bool const rgb_is_compressed) {
 	/*
 	UNFINISHED
 	Plays a recording num_loops times and records from rec_serverport on the last loop.
 	*/
+	std::cout << "hello" << std::endl;
 
-	unsigned length_recording = 0;
+	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
+	const unsigned depthsize = 512 * 424 * sizeof(float);
+	const unsigned framesize = (colorsize + depthsize) * num_kinect_cameras;
 
 	struct stat stat_buf;
-	int filesize = stat(filename.c_str(), &stat_buf);
-	filesize == 0 ? stat_buf.st_size : -1;
+	stat(filename.c_str(), &stat_buf);
 
+	const float length_recording = (float)stat_buf.st_size / ((float)framesize * 20.0f);
+
+	std::cout << stat_buf.st_size << std::endl;
+	std::cout << framesize << std::endl;
+	std::cout << length_recording << std::endl;
 
 	for (int i = 0; i < num_loops-1; ++i) {
-		play(filename);
 		std::cout << "Looping play.. " << i << std::endl;
+		play(filename, num_kinect_cameras, 20, rgb_is_compressed, false);
 	}
 
 	std::cout << "RECORDING from " << rec_serverport << " to: " << output_file << std::endl;
-	boost::thread th(record,
-		"/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
-	play(filename);
+	boost::thread th(record, output_file, rec_serverport, num_kinect_cameras, length_recording, rgb_is_compressed);
+	play(filename, num_kinect_cameras, 20, rgb_is_compressed, false);
 
 	return true;
 }
@@ -202,6 +225,8 @@ int main(int argc, char* argv[])
 	// record("/home/moka3156/kinect-daemon-tests/test-record.stream", "127.0.0.1:7000", 4, 5, true);
 	// play("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream");
 	// play_segment("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream", 4, 20, true, 20*5, 20*8);
+	// play_record_in_sync("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream",
+	// 	"127.0.0.1:7000", "/mnt/project_avatars/kinect_recordings/kinect-daemon-tests/rec_test.stream", 2, 4, false);
 
 	zmq::context_t ctx(1); // means single threaded
 	zmq::socket_t  socket(ctx, ZMQ_SUB); // means a subscriber
@@ -211,9 +236,8 @@ int main(int argc, char* argv[])
 	std::string connection_socket = "tcp://" + p.getArgs()[0];
 	socket.connect(connection_socket.c_str());
 
-	boost::thread_group thg;
-
 	// replace with message interface
+	boost::thread_group thg;
 	int cmd_id;
 	while(true){
 		zmq::message_t zmqm(sizeof(float));
@@ -238,6 +262,7 @@ int main(int argc, char* argv[])
 				play_segment("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream", 4, 20, true, 20*5, 20*8);
 				break;
 			}
+
 		}
 
 		std::cout << cmd_id << std::endl;
