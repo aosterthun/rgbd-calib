@@ -240,11 +240,14 @@ int main(int argc, char* argv[])
 	boost::thread_group thg;
 	int cmd_id;
 	while(true){
-		zmq::message_t zmqm(sizeof(float));
+		zmq::message_t zmqm(531);
 		socket.recv(&zmqm);
 		std::cout << "Received command." << std::endl;
-		memcpy( &cmd_id, (const unsigned char*) zmqm.data(), sizeof(float));
-
+		std::string responseString;
+		char responseArray[531-4];
+		memcpy(&responseArray, zmqm.data(), 531);
+		responseString = responseArray;	
+		std::cout << responseString << std::endl;
 		switch(cmd_id) {
 			case 1: {
 				play("/opt/kinect-resources/rgbd-framework/recordings/steppo_standing/steppo_standing.stream");
@@ -265,7 +268,7 @@ int main(int argc, char* argv[])
 
 		}
 
-		std::cout << cmd_id << std::endl;
+		//std::cout << cmd_id << std::endl;
 	}
 
 
