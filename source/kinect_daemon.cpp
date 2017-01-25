@@ -10,7 +10,7 @@
 #include "timevalue.hpp"
 #include "clock.hpp"
 #include "zmq_messages.cpp"
-
+#define STR_BOOL(s) ((s=="1")?true:false)
 
 bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed, bool const loop = true) {
 	unsigned min_frame_time_ns = 1000000000/max_fps;
@@ -81,7 +81,7 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 
 
 bool play(std::string const filename) {
-	return play(filename, 4, 20.0, false);
+	return play(filename, 4, 20.0, true);
 }
 
 
@@ -220,6 +220,7 @@ bool play_record_in_sync(const std::string filename, const std::string rec_serve
 
 int main(int argc, char* argv[])
 {
+	std::cout << "INFO: Deamon started" << std::endl;
 	CMDParser p("serverport");
 	p.init(argc,argv);
 
@@ -246,6 +247,7 @@ int main(int argc, char* argv[])
 		pykinecting::Message_Type mtype;
 		while(true){
 			socket.recv(&zmqm);
+			std::cout << "INFO: Received message" << std::endl;
 			int64_t more = 0;
 			size_t more_size = sizeof(more);
 			socket.getsockopt(ZMQ_RCVMORE, &more, &more_size);
@@ -265,9 +267,39 @@ int main(int argc, char* argv[])
 
 		switch(mtype) {
 			case pykinecting::PLAY: 
-				std::cout << "I want to play!" << std::endl;
-				play(resolvedRequest.at(1));
+				std::cout << "INFO: Stream started" << std::endl;
+				play(/* filename = */resolvedRequest.at(1));
 				break;
+
+			case pykinecting::PLAY_FRAMES:
+				play_segment(
+					/* filename = */resolvedRequest.at(1),
+					/* num_kinect_cameras = */std::stoi(resolvedRequest.at(6)),
+					/* max_fps = */20,
+					/* rgb_is_compressed = */false,
+					/* first_frame = */std::stoi(resolvedRequest.at(2)),
+					/* last_frame = */std::stoi(resolvedRequest.at(3)));
+				break;
+/*
+record(std::string const record_to_this_filename, std::string const serverport, unsigned const num_kinect_cameras,
+	float const num_seconds_to_record, bool const rgb_is_compressed
+*/
+			case pykinecting::RECORD:
+				std::cout << "INFO: Recording started" << std::endl;
+				record(
+					/* record_to_this_filename = */resolvedRequest.at(1),
+					/* serverport = */resolvedRequest.at(2),
+					/* num_kinect_cameras = */std::stoi(resolvedRequest.at(3)),
+					/* num_seconds_to_record = */std::stof(resolvedRequest.at(4)),
+					/* rgb_is_compressed = */STR_BOOL(resolvedRequest.at(5)));
+				break;
+
+			case pykinecting::RECORD_PLAY:
+				break;
+
+			case pykinecting::RESPONSE:
+				break;
+
 		}
 
 
