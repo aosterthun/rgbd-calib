@@ -116,6 +116,14 @@ A call to this function is equivalent to calling setvbuf with _IOFBF as mode and
   }
 
   void
+  FileBuffer::rewindFileTo(const size_t start_byte){
+    if(0 != m_file){
+      fseek(m_file, start_byte, SEEK_SET);
+      m_bytes_r = start_byte;
+    }
+  }
+
+  void
   FileBuffer::setLooping(bool onoff){
     m_looping = onoff;
   }

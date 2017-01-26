@@ -24,6 +24,7 @@
     void close();
 
     void rewindFile();
+    void rewindFileTo(const size_t start_byte);
 
     void setLooping(bool onoff);
     bool getLooping();
