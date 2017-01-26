@@ -241,7 +241,7 @@ int main(int argc, char* argv[])
 	// replace with message interface
 	boost::thread_group thg;
 	int cmd_id;
-	while(true){		
+	while(true){
 		zmq::message_t zmqm;
 		std::vector<std::string> resolvedRequest{};
 		pykinecting::Message_Type mtype;
@@ -268,7 +268,7 @@ int main(int argc, char* argv[])
 		}
 
 		switch(mtype) {
-			case pykinecting::PLAY: 
+			case pykinecting::PLAY:
 				std::cout << "INFO: Stream started" << std::endl;
 				play(/* filename = */resolvedRequest.at(1));
 				break;
@@ -321,7 +321,7 @@ int main(int argc, char* argv[])
 		std::string responseString;
 		char responseArray[531-4];
 		memcpy(&responseArray, zmqm.data(), 531);
-		responseString = responseArray;	
+		responseString = responseArray;
 		std::cout << responseString << std::endl;
 		switch(cmd_id) {
 			case 1: {
