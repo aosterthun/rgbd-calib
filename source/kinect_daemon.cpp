@@ -12,7 +12,7 @@
 #include "zmq_messages.cpp"
 #define STR_BOOL(s) ((s=="1")?true:false)
 
-bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed, bool const loop = true) {
+bool play(std::string const filename, unsigned const num_kinect_cameras, float const max_fps, bool const rgb_is_compressed, std::string const serverport, bool const loop = true) {
 	unsigned min_frame_time_ns = 1000000000/max_fps;
 
 	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
@@ -36,7 +36,7 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
-	std::string endpoint("tcp://141.54.147.23:7000");
+	std::string endpoint("tcp://" + serverport);
 	socket.bind(endpoint.c_str());
 
 	sensor::timevalue ts(sensor::clock::time());
@@ -89,8 +89,8 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 }
 
 
-bool play(std::string const filename) {
-	return play(filename, 4, 20.0, true);
+bool play(std::string const filename, std::string const serverport, unsigned num_cameras) {
+	return play(filename, num_cameras, 20.0, true, serverport);
 }
 
 
@@ -434,7 +434,9 @@ int main(int argc, char* argv[])
 		switch(mtype) {
 			case pykinecting::PLAY:
 				std::cout << "INFO: Stream started" << std::endl;
-				play(/* filename = */resolvedRequest.at(1));
+				play(/* filename =*/ resolvedRequest.at(1),
+									resolvedRequest.at(4),
+									std::stoi(resolvedRequest.at(5)));
 				break;
 
 			case pykinecting::PLAY_FRAMES:

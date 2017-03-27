@@ -61,7 +61,7 @@ namespace pykinecting{
 	}
 
 
-	inline std::vector<zmq::message_t> play(Message_Type type,std::string& message_id, std::string& filepath_src, std::string& user_id,bool is_compressed){
+	inline std::vector<zmq::message_t> play(Message_Type type,std::string& message_id, std::string& filepath_src, std::string& user_id,bool is_compressed, std::string serverport, std::string num_cameras){
 		zmq::message_t zmq_msg(529);
 		zmq::message_t zmq_msg2(3);
 		std::string msg;
@@ -71,6 +71,7 @@ namespace pykinecting{
 		filepath_src.append(255 - filepath_src.length(), '\t');
 		message_id.append(3 - message_id.length(), '\t');
 		std::string exType = pykinecting::toString(type);
+		serverport.append(21 - serverport.length(), '\t');
 		//exType.append(2 - exType.length(), '\t');
 		user_id.append(4 - user_id.length(), '\t');
 
@@ -79,7 +80,9 @@ namespace pykinecting{
 		msg.append(filepath_src);
 		msg.append(user_id);
 		msg.append(BOOL_STR(is_compressed));
-		msg.append(529 - 265, '\t');
+		msg.append(serverport);
+		msg.append(num_cameras);
+		msg.append(529 - 243, '\t');
 		msg.append("\0");
 		msg2.append("\0");
 		//std::cout << msg.c_str() << std::endl;
@@ -260,7 +263,9 @@ namespace pykinecting{
 				resolvedResponse.push_back(responseString.substr(3,255));
 				resolvedResponse.push_back(responseString.substr(258,4));
 				resolvedResponse.push_back(responseString.substr(262,1));
-				resolvedResponse.push_back(responseString.substr(263,530-263));
+				resolvedResponse.push_back(responseString.substr(263,21));
+				resolvedResponse.push_back(responseString.substr(284,1));
+				resolvedResponse.push_back(responseString.substr(285,530-285));
 				break;
 			case PLAY_FRAMES:
 				memcpy(&responseArray, response->data(), 530);
