@@ -153,7 +153,7 @@ bool record(std::string const record_to_this_filename, std::string const serverp
 	const unsigned depthsize = 512 * 424 * sizeof(float);
 	const unsigned framesize = (colorsize + depthsize) * num_kinect_cameras;
 
-	const unsigned min_frame_time_ns = 1000000000/15.0f;
+	const unsigned min_frame_time_ns = 1000000000/20.0f;
 
 	FileBuffer fb(record_to_this_filename.c_str());
 	if(!fb.open("w", 0)){
