@@ -90,7 +90,7 @@ bool play(std::string const filename, unsigned const num_kinect_cameras, float c
 
 
 bool play(std::string const filename, std::string const serverport, unsigned num_cameras) {
-	return play(filename, num_cameras, 20.0, true, serverport);
+	return play(filename, num_cameras, 10.0, true, serverport);
 }
 
 
