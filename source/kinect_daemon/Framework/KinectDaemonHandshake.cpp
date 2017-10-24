@@ -13,6 +13,5 @@ void KinectDaemonHandshake::client_ip(std::string _client_ip)
 }
 std::string KinectDaemonHandshake::client_ip()
 {
-	std::cout << this->client_ip_mem << std::endl;
 	return this->client_ip_mem;
 }

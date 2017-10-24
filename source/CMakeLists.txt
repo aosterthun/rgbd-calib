@@ -1,3 +1,7 @@
+add_executable(kinect_server kinect_server.cpp)
+target_link_libraries(kinect_server framework)
+install(TARGETS kinect_server DESTINATION bin)
+
 add_executable(measure_pose_offset measure_pose_offset.cpp)
 target_link_libraries(measure_pose_offset framework)
 install(TARGETS measure_pose_offset DESTINATION bin)

@@ -30,7 +30,7 @@ include_directories(SYSTEM ${OPENCV_INCLUDE_DIRS})
 # boost
 set(BOOST_INCLUDEDIR "/opt/boost/boost_1_55_0/include")
 set(BOOST_LIBRARYDIR "/opt/boost/boost_1_55_0/lib")
-find_package(Boost 1.54.0 REQUIRED COMPONENTS thread system)
+find_package(Boost 1.54.0 REQUIRED COMPONENTS thread system serialization)
 set(BOOST_INCLUDE_DIRS ${Boost_INCLUDE_DIRS} CACHE PATH "boost include dir")
 set(BOOST_LIBRARIES ${Boost_LIBRARIES} CACHE PATH "boost libraries")
 include_directories(SYSTEM ${BOOST_INCLUDE_DIRS})
@@ -118,7 +118,6 @@ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 add_subdirectory(framework)
 # applications
 add_subdirectory(source)
-add_subdirectory(source/kinect_daemon)
 
 ################################
 # suppress displaying of external lib options  
