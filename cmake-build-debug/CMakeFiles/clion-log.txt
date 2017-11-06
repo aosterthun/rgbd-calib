@@ -1,0 +1,25 @@
+/home/mejo6715/Programs/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib
+-- Looking for ZMQ
+-- Looking for ZMQ - found
+-- Looking for OPENCV
+-- Looking for OPENCV - found
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   thread
+--   system
+--   serialization
+--   chrono
+--   date_time
+--   atomic
+-- Looking for CGAL
+-- Looking for CGAL - found
+-- Looking for GMP
+-- Looking for GMP - found
+-- Looking for MPFR
+-- Looking for MPFR - found
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- Using X11 for window creation
+-- Using GLX for context creation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug

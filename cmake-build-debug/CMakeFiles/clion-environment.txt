@@ -1,0 +1,2 @@
+Options: 
+CMake: 3.8.2@/home/mejo6715/Programs/clion/bin/cmake/bin/cmake

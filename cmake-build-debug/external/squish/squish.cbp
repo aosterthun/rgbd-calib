@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="squish"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\external\;CMake Files\external\glfw-3.0.3\;CMake Files\external\glfw-3.0.3\docs\;CMake Files\external\glfw-3.0.3\src\;CMake Files\external\squish\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\framework\;CMake Files\source\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="squish">
+				<Option output="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/libsquishd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSQUISH_USE_SSE=2"/>
+					<Add directory="/opt/OpenCV/opencv-2.4.10_without_ffmpeg/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/include"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glm-0.9.5.3"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 squish"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="squish/fast">
+				<Option output="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/libsquishd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSQUISH_USE_SSE=2"/>
+					<Add directory="/opt/OpenCV/opencv-2.4.10_without_ffmpeg/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/include"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glm-0.9.5.3"/>
+					<Add directory="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 squish/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/alpha.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/alpha.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/clusterfit.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/clusterfit.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourblock.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourblock.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourfit.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourfit.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourset.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/colourset.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/maths.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/maths.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/rangefit.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/rangefit.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/simd.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/simd_float.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/simd_sse.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/simd_ve.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/singlecolourfit.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/singlecolourfit.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/singlecolourlookup.inl">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/squish.cpp">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/squish.h">
+			<Option target="squish"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/docs/Doxyfile.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\docs\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/docs/Doxyfile.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\docs\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/config.h.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfwConfig.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfwConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/config.h.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfwConfig.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfwConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.0.3\src\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\squish\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\squish\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake/modules/FindDependency.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\framework\"/>
+		</Unit>
+		<Unit filename="/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

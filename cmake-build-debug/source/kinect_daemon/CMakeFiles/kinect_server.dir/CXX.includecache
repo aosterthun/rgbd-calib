@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/source/kinect_daemon/Framework/KinectDaemonHandshake.hpp
+stdio.h
+-
+iostream
+-
+sstream
+-
+zmq.hpp
+-
+thread
+-
+memory
+-
+boost/archive/text_iarchive.hpp
+-
+boost/archive/text_oarchive.hpp
+-
+boost/thread.hpp
+-
+
+/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/source/kinect_daemon/kinect_server.cpp
+iostream
+-
+memory
+-
+boost/archive/text_iarchive.hpp
+-
+boost/archive/text_oarchive.hpp
+-
+zmq.hpp
+-
+Framework/KinectDaemonHandshake.hpp
+/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/source/kinect_daemon/Framework/KinectDaemonHandshake.hpp
+
