@@ -23,12 +23,14 @@
 #include "PlayCommand.hpp"
 #include "AbstractCommand.hpp"
 #include "ThreadEvent.hpp"
+#include <NotImplementedException.hpp>
+#include <KinectDaemonHandshake.hpp>
 
 
 class ZMQMessageResolver : public AbstractObserver, public AbstractCommand, public std::enable_shared_from_this<ZMQMessageResolver>
 {
 private:
-	std::map<unsigned, std::shared_ptr<boost::thread>> resolver_threads;
+	std::map<unsigned, std::shared_ptr<std::thread>> resolver_threads;
 	std::vector<unsigned> finished_threads;
 	unsigned unique_thread_id;
 	std::shared_ptr<std::mutex> thread_mutex;

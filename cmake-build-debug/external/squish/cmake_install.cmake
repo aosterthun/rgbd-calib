@@ -1,8 +1,8 @@
-# Install script for directory: /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish
+# Install script for directory: /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/squish
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install")
+  set(CMAKE_INSTALL_PREFIX "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,10 +33,10 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/libsquishd.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/squish/libsquishd.a")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish/squish.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/squish/squish.h")
 endif()
 

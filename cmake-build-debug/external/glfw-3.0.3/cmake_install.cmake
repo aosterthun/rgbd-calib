@@ -1,8 +1,8 @@
-# Install script for directory: /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3
+# Install script for directory: /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glfw-3.0.3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install")
+  set(CMAKE_INSTALL_PREFIX "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/src/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/src/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/docs/cmake_install.cmake")
 
 endif()
 

@@ -4,7 +4,7 @@
 #   GLFW_LIBRARY_DIR, folder in which the GLFW library is located
 #   GLFW_LIBRARY, library to link against to use GLFW
 
-set(GLFW_INCLUDE_DIR "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install/include")
-set(GLFW_LIBRARY_DIR "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install/lib")
+set(GLFW_INCLUDE_DIR "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install/include")
+set(GLFW_LIBRARY_DIR "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install/lib")
 
 find_library(GLFW_LIBRARY "glfw3" HINTS ${GLFW_LIBRARY_DIR})

@@ -6,12 +6,18 @@
 
 #IncludeRegexTransform: 
 
-/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/glew.c
+/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/glew.c
 GL/glew.h
+-
+GL/osmesa.h
+-
+GL/eglew.h
 -
 GL/wglew.h
 -
 GL/glxew.h
+-
+stddef.h
 -
 dlfcn.h
 -

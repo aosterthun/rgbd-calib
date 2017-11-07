@@ -19,14 +19,27 @@
 #include "Observable.hpp"
 #include "PlayCommand.hpp"
 #include "ZMQMessageEvent.hpp"
+#include <AbstractObserver.hpp>
+#include <NotImplementedException.hpp>
+#include <ThreadEvent.hpp>
+#include <mutex>
 
-class ZMQMessageReceiver : public Observable
+class ZMQMessageReceiver : public Observable , public AbstractObserver
 {
 private:
     std::string server;
+    std::map<unsigned, std::shared_ptr<std::thread>> running_threads;
+    std::vector<unsigned> finished_threads;
+    unsigned unique_thread_id;
+    std::shared_ptr<std::mutex> thread_mutex;
     
 public:
-    void receive(std::string const& _server);
+    ZMQMessageReceiver();
+    void receive(std::string const &_server, std::shared_ptr<Event> _event);
+    virtual void update(std::shared_ptr<Observable> _observable);
+    virtual void update(Observable* _observable);
+    virtual void update(std::shared_ptr<Observable> _observable, std::shared_ptr<Event> _event);
+    virtual void update(Observable* _observable, std::shared_ptr<Event> _event);
 };
 
 #endif /* ZMQMessageReceiver_hpp */

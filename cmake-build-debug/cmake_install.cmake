@@ -1,8 +1,8 @@
-# Install script for directory: /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib
+# Install script for directory: /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install")
+  set(CMAKE_INSTALL_PREFIX "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/cmake_install.cmake")
-  include("/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/squish/cmake_install.cmake")
-  include("/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework/cmake_install.cmake")
-  include("/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/source/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/squish/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework/cmake_install.cmake")
+  include("/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/source/cmake_install.cmake")
 
 endif()
 
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

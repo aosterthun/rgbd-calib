@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/mejo6715/Programs/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/arne/Documents/cLion/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/mejo6715/Programs/clion/bin/cmake/bin/cmake -E remove -f
+RM = /home/arne/Documents/cLion/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib
+CMAKE_SOURCE_DIR = /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug
+CMAKE_BINARY_DIR = /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include framework/CMakeFiles/framework.dir/depend.make
@@ -59,16 +59,16 @@ include framework/CMakeFiles/framework.dir/flags.make
 
 framework/CMakeFiles/framework.dir/glew.c.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/glew.c.o: ../framework/glew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object framework/CMakeFiles/framework.dir/glew.c.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/framework.dir/glew.c.o   -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/glew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object framework/CMakeFiles/framework.dir/glew.c.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/framework.dir/glew.c.o   -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/glew.c
 
 framework/CMakeFiles/framework.dir/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/framework.dir/glew.c.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/glew.c > CMakeFiles/framework.dir/glew.c.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/glew.c > CMakeFiles/framework.dir/glew.c.i
 
 framework/CMakeFiles/framework.dir/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/framework.dir/glew.c.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/glew.c -o CMakeFiles/framework.dir/glew.c.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/glew.c -o CMakeFiles/framework.dir/glew.c.s
 
 framework/CMakeFiles/framework.dir/glew.c.o.requires:
 
@@ -83,16 +83,16 @@ framework/CMakeFiles/framework.dir/glew.c.o.provides.build: framework/CMakeFiles
 
 framework/CMakeFiles/framework.dir/ARTListener.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ARTListener.cpp.o: ../framework/ARTListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object framework/CMakeFiles/framework.dir/ARTListener.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ARTListener.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ARTListener.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object framework/CMakeFiles/framework.dir/ARTListener.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ARTListener.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ARTListener.cpp
 
 framework/CMakeFiles/framework.dir/ARTListener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ARTListener.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ARTListener.cpp > CMakeFiles/framework.dir/ARTListener.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ARTListener.cpp > CMakeFiles/framework.dir/ARTListener.cpp.i
 
 framework/CMakeFiles/framework.dir/ARTListener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ARTListener.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ARTListener.cpp -o CMakeFiles/framework.dir/ARTListener.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ARTListener.cpp -o CMakeFiles/framework.dir/ARTListener.cpp.s
 
 framework/CMakeFiles/framework.dir/ARTListener.cpp.o.requires:
 
@@ -107,16 +107,16 @@ framework/CMakeFiles/framework.dir/ARTListener.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o: ../framework/AbstractCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/AbstractCommand.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/AbstractCommand.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractCommand.cpp
 
 framework/CMakeFiles/framework.dir/AbstractCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/AbstractCommand.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractCommand.cpp > CMakeFiles/framework.dir/AbstractCommand.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractCommand.cpp > CMakeFiles/framework.dir/AbstractCommand.cpp.i
 
 framework/CMakeFiles/framework.dir/AbstractCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/AbstractCommand.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractCommand.cpp -o CMakeFiles/framework.dir/AbstractCommand.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractCommand.cpp -o CMakeFiles/framework.dir/AbstractCommand.cpp.s
 
 framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o.requires:
 
@@ -131,16 +131,16 @@ framework/CMakeFiles/framework.dir/AbstractCommand.cpp.o.provides.build: framewo
 
 framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o: ../framework/AbstractFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/AbstractFactory.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/AbstractFactory.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractFactory.cpp
 
 framework/CMakeFiles/framework.dir/AbstractFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/AbstractFactory.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractFactory.cpp > CMakeFiles/framework.dir/AbstractFactory.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractFactory.cpp > CMakeFiles/framework.dir/AbstractFactory.cpp.i
 
 framework/CMakeFiles/framework.dir/AbstractFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/AbstractFactory.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/AbstractFactory.cpp -o CMakeFiles/framework.dir/AbstractFactory.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractFactory.cpp -o CMakeFiles/framework.dir/AbstractFactory.cpp.s
 
 framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o.requires:
 
@@ -155,16 +155,16 @@ framework/CMakeFiles/framework.dir/AbstractFactory.cpp.o.provides.build: framewo
 
 framework/CMakeFiles/framework.dir/CMDParser.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/CMDParser.cpp.o: ../framework/CMDParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object framework/CMakeFiles/framework.dir/CMDParser.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CMDParser.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CMDParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object framework/CMakeFiles/framework.dir/CMDParser.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CMDParser.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CMDParser.cpp
 
 framework/CMakeFiles/framework.dir/CMDParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/CMDParser.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CMDParser.cpp > CMakeFiles/framework.dir/CMDParser.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CMDParser.cpp > CMakeFiles/framework.dir/CMDParser.cpp.i
 
 framework/CMakeFiles/framework.dir/CMDParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/CMDParser.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CMDParser.cpp -o CMakeFiles/framework.dir/CMDParser.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CMDParser.cpp -o CMakeFiles/framework.dir/CMDParser.cpp.s
 
 framework/CMakeFiles/framework.dir/CMDParser.cpp.o.requires:
 
@@ -179,16 +179,16 @@ framework/CMakeFiles/framework.dir/CMDParser.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/CSVExporter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/CSVExporter.cpp.o: ../framework/CSVExporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object framework/CMakeFiles/framework.dir/CSVExporter.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CSVExporter.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CSVExporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object framework/CMakeFiles/framework.dir/CSVExporter.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CSVExporter.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CSVExporter.cpp
 
 framework/CMakeFiles/framework.dir/CSVExporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/CSVExporter.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CSVExporter.cpp > CMakeFiles/framework.dir/CSVExporter.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CSVExporter.cpp > CMakeFiles/framework.dir/CSVExporter.cpp.i
 
 framework/CMakeFiles/framework.dir/CSVExporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/CSVExporter.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CSVExporter.cpp -o CMakeFiles/framework.dir/CSVExporter.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CSVExporter.cpp -o CMakeFiles/framework.dir/CSVExporter.cpp.s
 
 framework/CMakeFiles/framework.dir/CSVExporter.cpp.o.requires:
 
@@ -203,16 +203,16 @@ framework/CMakeFiles/framework.dir/CSVExporter.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o: ../framework/ChessboardSampling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ChessboardSampling.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChessboardSampling.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ChessboardSampling.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChessboardSampling.cpp
 
 framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ChessboardSampling.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChessboardSampling.cpp > CMakeFiles/framework.dir/ChessboardSampling.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChessboardSampling.cpp > CMakeFiles/framework.dir/ChessboardSampling.cpp.i
 
 framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ChessboardSampling.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChessboardSampling.cpp -o CMakeFiles/framework.dir/ChessboardSampling.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChessboardSampling.cpp -o CMakeFiles/framework.dir/ChessboardSampling.cpp.s
 
 framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o.requires:
 
@@ -227,16 +227,16 @@ framework/CMakeFiles/framework.dir/ChessboardSampling.cpp.o.provides.build: fram
 
 framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o: ../framework/ChronoMeter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ChronoMeter.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChronoMeter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ChronoMeter.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChronoMeter.cpp
 
 framework/CMakeFiles/framework.dir/ChronoMeter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ChronoMeter.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChronoMeter.cpp > CMakeFiles/framework.dir/ChronoMeter.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChronoMeter.cpp > CMakeFiles/framework.dir/ChronoMeter.cpp.i
 
 framework/CMakeFiles/framework.dir/ChronoMeter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ChronoMeter.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ChronoMeter.cpp -o CMakeFiles/framework.dir/ChronoMeter.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ChronoMeter.cpp -o CMakeFiles/framework.dir/ChronoMeter.cpp.s
 
 framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o.requires:
 
@@ -251,16 +251,16 @@ framework/CMakeFiles/framework.dir/ChronoMeter.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/CommandEvent.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/CommandEvent.cpp.o: ../framework/CommandEvent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object framework/CMakeFiles/framework.dir/CommandEvent.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CommandEvent.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object framework/CMakeFiles/framework.dir/CommandEvent.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CommandEvent.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandEvent.cpp
 
 framework/CMakeFiles/framework.dir/CommandEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/CommandEvent.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandEvent.cpp > CMakeFiles/framework.dir/CommandEvent.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandEvent.cpp > CMakeFiles/framework.dir/CommandEvent.cpp.i
 
 framework/CMakeFiles/framework.dir/CommandEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/CommandEvent.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandEvent.cpp -o CMakeFiles/framework.dir/CommandEvent.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandEvent.cpp -o CMakeFiles/framework.dir/CommandEvent.cpp.s
 
 framework/CMakeFiles/framework.dir/CommandEvent.cpp.o.requires:
 
@@ -275,16 +275,16 @@ framework/CMakeFiles/framework.dir/CommandEvent.cpp.o.provides.build: framework/
 
 framework/CMakeFiles/framework.dir/CommandStatus.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/CommandStatus.cpp.o: ../framework/CommandStatus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object framework/CMakeFiles/framework.dir/CommandStatus.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CommandStatus.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandStatus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object framework/CMakeFiles/framework.dir/CommandStatus.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/CommandStatus.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandStatus.cpp
 
 framework/CMakeFiles/framework.dir/CommandStatus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/CommandStatus.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandStatus.cpp > CMakeFiles/framework.dir/CommandStatus.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandStatus.cpp > CMakeFiles/framework.dir/CommandStatus.cpp.i
 
 framework/CMakeFiles/framework.dir/CommandStatus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/CommandStatus.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/CommandStatus.cpp -o CMakeFiles/framework.dir/CommandStatus.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/CommandStatus.cpp -o CMakeFiles/framework.dir/CommandStatus.cpp.s
 
 framework/CMakeFiles/framework.dir/CommandStatus.cpp.o.requires:
 
@@ -299,16 +299,16 @@ framework/CMakeFiles/framework.dir/CommandStatus.cpp.o.provides.build: framework
 
 framework/CMakeFiles/framework.dir/DataTypes.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/DataTypes.cpp.o: ../framework/DataTypes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/DataTypes.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/DataTypes.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/DataTypes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object framework/CMakeFiles/framework.dir/DataTypes.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/DataTypes.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/DataTypes.cpp
 
 framework/CMakeFiles/framework.dir/DataTypes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/DataTypes.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/DataTypes.cpp > CMakeFiles/framework.dir/DataTypes.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/DataTypes.cpp > CMakeFiles/framework.dir/DataTypes.cpp.i
 
 framework/CMakeFiles/framework.dir/DataTypes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/DataTypes.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/DataTypes.cpp -o CMakeFiles/framework.dir/DataTypes.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/DataTypes.cpp -o CMakeFiles/framework.dir/DataTypes.cpp.s
 
 framework/CMakeFiles/framework.dir/DataTypes.cpp.o.requires:
 
@@ -323,16 +323,16 @@ framework/CMakeFiles/framework.dir/DataTypes.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/Event.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/Event.cpp.o: ../framework/Event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object framework/CMakeFiles/framework.dir/Event.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Event.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object framework/CMakeFiles/framework.dir/Event.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Event.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Event.cpp
 
 framework/CMakeFiles/framework.dir/Event.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/Event.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Event.cpp > CMakeFiles/framework.dir/Event.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Event.cpp > CMakeFiles/framework.dir/Event.cpp.i
 
 framework/CMakeFiles/framework.dir/Event.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/Event.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Event.cpp -o CMakeFiles/framework.dir/Event.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Event.cpp -o CMakeFiles/framework.dir/Event.cpp.s
 
 framework/CMakeFiles/framework.dir/Event.cpp.o.requires:
 
@@ -347,16 +347,16 @@ framework/CMakeFiles/framework.dir/Event.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/EventData.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/EventData.cpp.o: ../framework/EventData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object framework/CMakeFiles/framework.dir/EventData.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/EventData.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/EventData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object framework/CMakeFiles/framework.dir/EventData.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/EventData.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/EventData.cpp
 
 framework/CMakeFiles/framework.dir/EventData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/EventData.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/EventData.cpp > CMakeFiles/framework.dir/EventData.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/EventData.cpp > CMakeFiles/framework.dir/EventData.cpp.i
 
 framework/CMakeFiles/framework.dir/EventData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/EventData.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/EventData.cpp -o CMakeFiles/framework.dir/EventData.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/EventData.cpp -o CMakeFiles/framework.dir/EventData.cpp.s
 
 framework/CMakeFiles/framework.dir/EventData.cpp.o.requires:
 
@@ -371,16 +371,16 @@ framework/CMakeFiles/framework.dir/EventData.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/FileBuffer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/FileBuffer.cpp.o: ../framework/FileBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object framework/CMakeFiles/framework.dir/FileBuffer.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/FileBuffer.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/FileBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object framework/CMakeFiles/framework.dir/FileBuffer.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/FileBuffer.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/FileBuffer.cpp
 
 framework/CMakeFiles/framework.dir/FileBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/FileBuffer.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/FileBuffer.cpp > CMakeFiles/framework.dir/FileBuffer.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/FileBuffer.cpp > CMakeFiles/framework.dir/FileBuffer.cpp.i
 
 framework/CMakeFiles/framework.dir/FileBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/FileBuffer.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/FileBuffer.cpp -o CMakeFiles/framework.dir/FileBuffer.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/FileBuffer.cpp -o CMakeFiles/framework.dir/FileBuffer.cpp.s
 
 framework/CMakeFiles/framework.dir/FileBuffer.cpp.o.requires:
 
@@ -395,16 +395,16 @@ framework/CMakeFiles/framework.dir/FileBuffer.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/GridFitter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/GridFitter.cpp.o: ../framework/GridFitter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object framework/CMakeFiles/framework.dir/GridFitter.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/GridFitter.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/GridFitter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object framework/CMakeFiles/framework.dir/GridFitter.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/GridFitter.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/GridFitter.cpp
 
 framework/CMakeFiles/framework.dir/GridFitter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/GridFitter.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/GridFitter.cpp > CMakeFiles/framework.dir/GridFitter.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/GridFitter.cpp > CMakeFiles/framework.dir/GridFitter.cpp.i
 
 framework/CMakeFiles/framework.dir/GridFitter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/GridFitter.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/GridFitter.cpp -o CMakeFiles/framework.dir/GridFitter.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/GridFitter.cpp -o CMakeFiles/framework.dir/GridFitter.cpp.s
 
 framework/CMakeFiles/framework.dir/GridFitter.cpp.o.requires:
 
@@ -419,16 +419,16 @@ framework/CMakeFiles/framework.dir/GridFitter.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o: ../framework/KinectDaemonHandshake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/KinectDaemonHandshake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectDaemonHandshake.cpp
 
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/KinectDaemonHandshake.cpp > CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectDaemonHandshake.cpp > CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.i
 
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/KinectDaemonHandshake.cpp -o CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectDaemonHandshake.cpp -o CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.s
 
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o.requires:
 
@@ -441,18 +441,42 @@ framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o.provides: framewo
 framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o.provides.build: framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o
 
 
+framework/CMakeFiles/framework.dir/KinectServer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/KinectServer.cpp.o: ../framework/KinectServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object framework/CMakeFiles/framework.dir/KinectServer.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/KinectServer.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectServer.cpp
+
+framework/CMakeFiles/framework.dir/KinectServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/KinectServer.cpp.i"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectServer.cpp > CMakeFiles/framework.dir/KinectServer.cpp.i
+
+framework/CMakeFiles/framework.dir/KinectServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/KinectServer.cpp.s"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/KinectServer.cpp -o CMakeFiles/framework.dir/KinectServer.cpp.s
+
+framework/CMakeFiles/framework.dir/KinectServer.cpp.o.requires:
+
+.PHONY : framework/CMakeFiles/framework.dir/KinectServer.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/KinectServer.cpp.o.provides: framework/CMakeFiles/framework.dir/KinectServer.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/KinectServer.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/KinectServer.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/KinectServer.cpp.o.provides.build: framework/CMakeFiles/framework.dir/KinectServer.cpp.o
+
+
 framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o: ../framework/MatrixInterpolation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/MatrixInterpolation.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/MatrixInterpolation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/MatrixInterpolation.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/MatrixInterpolation.cpp
 
 framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/MatrixInterpolation.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/MatrixInterpolation.cpp > CMakeFiles/framework.dir/MatrixInterpolation.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/MatrixInterpolation.cpp > CMakeFiles/framework.dir/MatrixInterpolation.cpp.i
 
 framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/MatrixInterpolation.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/MatrixInterpolation.cpp -o CMakeFiles/framework.dir/MatrixInterpolation.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/MatrixInterpolation.cpp -o CMakeFiles/framework.dir/MatrixInterpolation.cpp.s
 
 framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o.requires:
 
@@ -467,16 +491,16 @@ framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o.provides.build: fra
 
 framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o: ../framework/NaturalNeighbourInterpolator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp
 
 framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp > CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp > CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.i
 
 framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp -o CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NaturalNeighbourInterpolator.cpp -o CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.s
 
 framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o.requires:
 
@@ -491,16 +515,16 @@ framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o.provides.b
 
 framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o: ../framework/NearestNeighbourSearch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NearestNeighbourSearch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NearestNeighbourSearch.cpp
 
 framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NearestNeighbourSearch.cpp > CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NearestNeighbourSearch.cpp > CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.i
 
 framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/NearestNeighbourSearch.cpp -o CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/NearestNeighbourSearch.cpp -o CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.s
 
 framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o.requires:
 
@@ -515,16 +539,16 @@ framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o.provides.build: 
 
 framework/CMakeFiles/framework.dir/Observable.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/Observable.cpp.o: ../framework/Observable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object framework/CMakeFiles/framework.dir/Observable.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Observable.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Observable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object framework/CMakeFiles/framework.dir/Observable.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Observable.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Observable.cpp
 
 framework/CMakeFiles/framework.dir/Observable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/Observable.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Observable.cpp > CMakeFiles/framework.dir/Observable.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Observable.cpp > CMakeFiles/framework.dir/Observable.cpp.i
 
 framework/CMakeFiles/framework.dir/Observable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/Observable.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Observable.cpp -o CMakeFiles/framework.dir/Observable.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Observable.cpp -o CMakeFiles/framework.dir/Observable.cpp.s
 
 framework/CMakeFiles/framework.dir/Observable.cpp.o.requires:
 
@@ -539,16 +563,16 @@ framework/CMakeFiles/framework.dir/Observable.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o: ../framework/OneEuroFilterContainer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OneEuroFilterContainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OneEuroFilterContainer.cpp
 
 framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OneEuroFilterContainer.cpp > CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OneEuroFilterContainer.cpp > CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.i
 
 framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OneEuroFilterContainer.cpp -o CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OneEuroFilterContainer.cpp -o CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.s
 
 framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o.requires:
 
@@ -563,16 +587,16 @@ framework/CMakeFiles/framework.dir/OneEuroFilterContainer.cpp.o.provides.build: 
 
 framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o: ../framework/OpenCVChessboardCornerDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp
 
 framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp > CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp > CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.i
 
 framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp -o CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVChessboardCornerDetector.cpp -o CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.s
 
 framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o.requires:
 
@@ -587,16 +611,16 @@ framework/CMakeFiles/framework.dir/OpenCVChessboardCornerDetector.cpp.o.provides
 
 framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o: ../framework/OpenCVHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVHelper.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVHelper.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVHelper.cpp
 
 framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/OpenCVHelper.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVHelper.cpp > CMakeFiles/framework.dir/OpenCVHelper.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVHelper.cpp > CMakeFiles/framework.dir/OpenCVHelper.cpp.i
 
 framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/OpenCVHelper.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVHelper.cpp -o CMakeFiles/framework.dir/OpenCVHelper.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVHelper.cpp -o CMakeFiles/framework.dir/OpenCVHelper.cpp.s
 
 framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o.requires:
 
@@ -611,16 +635,16 @@ framework/CMakeFiles/framework.dir/OpenCVHelper.cpp.o.provides.build: framework/
 
 framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o: ../framework/OpenCVUndistortion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVUndistortion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVUndistortion.cpp
 
 framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/OpenCVUndistortion.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVUndistortion.cpp > CMakeFiles/framework.dir/OpenCVUndistortion.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVUndistortion.cpp > CMakeFiles/framework.dir/OpenCVUndistortion.cpp.i
 
 framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/OpenCVUndistortion.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/OpenCVUndistortion.cpp -o CMakeFiles/framework.dir/OpenCVUndistortion.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/OpenCVUndistortion.cpp -o CMakeFiles/framework.dir/OpenCVUndistortion.cpp.s
 
 framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o.requires:
 
@@ -635,16 +659,16 @@ framework/CMakeFiles/framework.dir/OpenCVUndistortion.cpp.o.provides.build: fram
 
 framework/CMakeFiles/framework.dir/PlaneFit.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/PlaneFit.cpp.o: ../framework/PlaneFit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object framework/CMakeFiles/framework.dir/PlaneFit.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlaneFit.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlaneFit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object framework/CMakeFiles/framework.dir/PlaneFit.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlaneFit.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlaneFit.cpp
 
 framework/CMakeFiles/framework.dir/PlaneFit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/PlaneFit.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlaneFit.cpp > CMakeFiles/framework.dir/PlaneFit.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlaneFit.cpp > CMakeFiles/framework.dir/PlaneFit.cpp.i
 
 framework/CMakeFiles/framework.dir/PlaneFit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/PlaneFit.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlaneFit.cpp -o CMakeFiles/framework.dir/PlaneFit.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlaneFit.cpp -o CMakeFiles/framework.dir/PlaneFit.cpp.s
 
 framework/CMakeFiles/framework.dir/PlaneFit.cpp.o.requires:
 
@@ -659,16 +683,16 @@ framework/CMakeFiles/framework.dir/PlaneFit.cpp.o.provides.build: framework/CMak
 
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/PlayCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object framework/CMakeFiles/framework.dir/PlayCommand.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlayCommand.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object framework/CMakeFiles/framework.dir/PlayCommand.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlayCommand.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommand.cpp
 
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/PlayCommand.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommand.cpp > CMakeFiles/framework.dir/PlayCommand.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommand.cpp > CMakeFiles/framework.dir/PlayCommand.cpp.i
 
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/PlayCommand.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommand.cpp -o CMakeFiles/framework.dir/PlayCommand.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommand.cpp -o CMakeFiles/framework.dir/PlayCommand.cpp.s
 
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o.requires:
 
@@ -683,16 +707,16 @@ framework/CMakeFiles/framework.dir/PlayCommand.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/PlayCommandFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlayCommandFactory.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommandFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PlayCommandFactory.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommandFactory.cpp
 
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/PlayCommandFactory.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommandFactory.cpp > CMakeFiles/framework.dir/PlayCommandFactory.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommandFactory.cpp > CMakeFiles/framework.dir/PlayCommandFactory.cpp.i
 
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/PlayCommandFactory.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PlayCommandFactory.cpp -o CMakeFiles/framework.dir/PlayCommandFactory.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommandFactory.cpp -o CMakeFiles/framework.dir/PlayCommandFactory.cpp.s
 
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o.requires:
 
@@ -707,16 +731,16 @@ framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o.provides.build: fram
 
 framework/CMakeFiles/framework.dir/PoseTracker.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/PoseTracker.cpp.o: ../framework/PoseTracker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object framework/CMakeFiles/framework.dir/PoseTracker.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PoseTracker.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PoseTracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object framework/CMakeFiles/framework.dir/PoseTracker.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/PoseTracker.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PoseTracker.cpp
 
 framework/CMakeFiles/framework.dir/PoseTracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/PoseTracker.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PoseTracker.cpp > CMakeFiles/framework.dir/PoseTracker.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PoseTracker.cpp > CMakeFiles/framework.dir/PoseTracker.cpp.i
 
 framework/CMakeFiles/framework.dir/PoseTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/PoseTracker.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/PoseTracker.cpp -o CMakeFiles/framework.dir/PoseTracker.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PoseTracker.cpp -o CMakeFiles/framework.dir/PoseTracker.cpp.s
 
 framework/CMakeFiles/framework.dir/PoseTracker.cpp.o.requires:
 
@@ -731,16 +755,16 @@ framework/CMakeFiles/framework.dir/PoseTracker.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/SampleFilter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/SampleFilter.cpp.o: ../framework/SampleFilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object framework/CMakeFiles/framework.dir/SampleFilter.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/SampleFilter.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/SampleFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object framework/CMakeFiles/framework.dir/SampleFilter.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/SampleFilter.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/SampleFilter.cpp
 
 framework/CMakeFiles/framework.dir/SampleFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/SampleFilter.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/SampleFilter.cpp > CMakeFiles/framework.dir/SampleFilter.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/SampleFilter.cpp > CMakeFiles/framework.dir/SampleFilter.cpp.i
 
 framework/CMakeFiles/framework.dir/SampleFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/SampleFilter.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/SampleFilter.cpp -o CMakeFiles/framework.dir/SampleFilter.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/SampleFilter.cpp -o CMakeFiles/framework.dir/SampleFilter.cpp.s
 
 framework/CMakeFiles/framework.dir/SampleFilter.cpp.o.requires:
 
@@ -755,16 +779,16 @@ framework/CMakeFiles/framework.dir/SampleFilter.cpp.o.provides.build: framework/
 
 framework/CMakeFiles/framework.dir/Singleton.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/Singleton.cpp.o: ../framework/Singleton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object framework/CMakeFiles/framework.dir/Singleton.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Singleton.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Singleton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object framework/CMakeFiles/framework.dir/Singleton.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/Singleton.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Singleton.cpp
 
 framework/CMakeFiles/framework.dir/Singleton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/Singleton.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Singleton.cpp > CMakeFiles/framework.dir/Singleton.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Singleton.cpp > CMakeFiles/framework.dir/Singleton.cpp.i
 
 framework/CMakeFiles/framework.dir/Singleton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/Singleton.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/Singleton.cpp -o CMakeFiles/framework.dir/Singleton.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Singleton.cpp -o CMakeFiles/framework.dir/Singleton.cpp.s
 
 framework/CMakeFiles/framework.dir/Singleton.cpp.o.requires:
 
@@ -779,16 +803,16 @@ framework/CMakeFiles/framework.dir/Singleton.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o: ../framework/ThreadEvent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ThreadEvent.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ThreadEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ThreadEvent.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ThreadEvent.cpp
 
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ThreadEvent.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ThreadEvent.cpp > CMakeFiles/framework.dir/ThreadEvent.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ThreadEvent.cpp > CMakeFiles/framework.dir/ThreadEvent.cpp.i
 
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ThreadEvent.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ThreadEvent.cpp -o CMakeFiles/framework.dir/ThreadEvent.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ThreadEvent.cpp -o CMakeFiles/framework.dir/ThreadEvent.cpp.s
 
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o.requires:
 
@@ -801,18 +825,42 @@ framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o.provides: framework/CMakeFi
 framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o.provides.build: framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o
 
 
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o: ../framework/ZMQComManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQComManager.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQComManager.cpp
+
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQComManager.cpp.i"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQComManager.cpp > CMakeFiles/framework.dir/ZMQComManager.cpp.i
+
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQComManager.cpp.s"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQComManager.cpp -o CMakeFiles/framework.dir/ZMQComManager.cpp.s
+
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.requires:
+
+.PHONY : framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.provides: framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.provides.build: framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o
+
+
 framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o: ../framework/ZMQMessage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessage.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessage.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessage.cpp
 
 framework/CMakeFiles/framework.dir/ZMQMessage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQMessage.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessage.cpp > CMakeFiles/framework.dir/ZMQMessage.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessage.cpp > CMakeFiles/framework.dir/ZMQMessage.cpp.i
 
 framework/CMakeFiles/framework.dir/ZMQMessage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQMessage.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessage.cpp -o CMakeFiles/framework.dir/ZMQMessage.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessage.cpp -o CMakeFiles/framework.dir/ZMQMessage.cpp.s
 
 framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o.requires:
 
@@ -827,16 +875,16 @@ framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o: ../framework/ZMQMessageEvent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageEvent.cpp
 
 framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQMessageEvent.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageEvent.cpp > CMakeFiles/framework.dir/ZMQMessageEvent.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageEvent.cpp > CMakeFiles/framework.dir/ZMQMessageEvent.cpp.i
 
 framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQMessageEvent.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageEvent.cpp -o CMakeFiles/framework.dir/ZMQMessageEvent.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageEvent.cpp -o CMakeFiles/framework.dir/ZMQMessageEvent.cpp.s
 
 framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o.requires:
 
@@ -851,16 +899,16 @@ framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o.provides.build: framewo
 
 framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o: ../framework/ZMQMessageReceiver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageReceiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageReceiver.cpp
 
 framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageReceiver.cpp > CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageReceiver.cpp > CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.i
 
 framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageReceiver.cpp -o CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageReceiver.cpp -o CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.s
 
 framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o.requires:
 
@@ -875,16 +923,16 @@ framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o.provides.build: fram
 
 framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o: ../framework/ZMQMessageResolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageResolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageResolver.cpp
 
 framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQMessageResolver.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageResolver.cpp > CMakeFiles/framework.dir/ZMQMessageResolver.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageResolver.cpp > CMakeFiles/framework.dir/ZMQMessageResolver.cpp.i
 
 framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQMessageResolver.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageResolver.cpp -o CMakeFiles/framework.dir/ZMQMessageResolver.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageResolver.cpp -o CMakeFiles/framework.dir/ZMQMessageResolver.cpp.s
 
 framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o.requires:
 
@@ -899,16 +947,16 @@ framework/CMakeFiles/framework.dir/ZMQMessageResolver.cpp.o.provides.build: fram
 
 framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o: ../framework/ZMQMessageType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageType.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ZMQMessageType.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageType.cpp
 
 framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ZMQMessageType.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageType.cpp > CMakeFiles/framework.dir/ZMQMessageType.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageType.cpp > CMakeFiles/framework.dir/ZMQMessageType.cpp.i
 
 framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ZMQMessageType.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/ZMQMessageType.cpp -o CMakeFiles/framework.dir/ZMQMessageType.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/ZMQMessageType.cpp -o CMakeFiles/framework.dir/ZMQMessageType.cpp.s
 
 framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o.requires:
 
@@ -923,16 +971,16 @@ framework/CMakeFiles/framework.dir/ZMQMessageType.cpp.o.provides.build: framewor
 
 framework/CMakeFiles/framework.dir/calibrator.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/calibrator.cpp.o: ../framework/calibrator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object framework/CMakeFiles/framework.dir/calibrator.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/calibrator.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibrator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object framework/CMakeFiles/framework.dir/calibrator.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/calibrator.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibrator.cpp
 
 framework/CMakeFiles/framework.dir/calibrator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/calibrator.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibrator.cpp > CMakeFiles/framework.dir/calibrator.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibrator.cpp > CMakeFiles/framework.dir/calibrator.cpp.i
 
 framework/CMakeFiles/framework.dir/calibrator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/calibrator.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibrator.cpp -o CMakeFiles/framework.dir/calibrator.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibrator.cpp -o CMakeFiles/framework.dir/calibrator.cpp.s
 
 framework/CMakeFiles/framework.dir/calibrator.cpp.o.requires:
 
@@ -947,16 +995,16 @@ framework/CMakeFiles/framework.dir/calibrator.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/calibvolume.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/calibvolume.cpp.o: ../framework/calibvolume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object framework/CMakeFiles/framework.dir/calibvolume.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/calibvolume.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibvolume.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object framework/CMakeFiles/framework.dir/calibvolume.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/calibvolume.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibvolume.cpp
 
 framework/CMakeFiles/framework.dir/calibvolume.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/calibvolume.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibvolume.cpp > CMakeFiles/framework.dir/calibvolume.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibvolume.cpp > CMakeFiles/framework.dir/calibvolume.cpp.i
 
 framework/CMakeFiles/framework.dir/calibvolume.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/calibvolume.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/calibvolume.cpp -o CMakeFiles/framework.dir/calibvolume.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/calibvolume.cpp -o CMakeFiles/framework.dir/calibvolume.cpp.s
 
 framework/CMakeFiles/framework.dir/calibvolume.cpp.o.requires:
 
@@ -971,16 +1019,16 @@ framework/CMakeFiles/framework.dir/calibvolume.cpp.o.provides.build: framework/C
 
 framework/CMakeFiles/framework.dir/clock.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/clock.cpp.o: ../framework/clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object framework/CMakeFiles/framework.dir/clock.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/clock.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object framework/CMakeFiles/framework.dir/clock.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/clock.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/clock.cpp
 
 framework/CMakeFiles/framework.dir/clock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/clock.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/clock.cpp > CMakeFiles/framework.dir/clock.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/clock.cpp > CMakeFiles/framework.dir/clock.cpp.i
 
 framework/CMakeFiles/framework.dir/clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/clock.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/clock.cpp -o CMakeFiles/framework.dir/clock.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/clock.cpp -o CMakeFiles/framework.dir/clock.cpp.s
 
 framework/CMakeFiles/framework.dir/clock.cpp.o.requires:
 
@@ -995,16 +1043,16 @@ framework/CMakeFiles/framework.dir/clock.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/device.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/device.cpp.o: ../framework/device.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object framework/CMakeFiles/framework.dir/device.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/device.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object framework/CMakeFiles/framework.dir/device.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/device.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device.cpp
 
 framework/CMakeFiles/framework.dir/device.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/device.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device.cpp > CMakeFiles/framework.dir/device.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device.cpp > CMakeFiles/framework.dir/device.cpp.i
 
 framework/CMakeFiles/framework.dir/device.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/device.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device.cpp -o CMakeFiles/framework.dir/device.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device.cpp -o CMakeFiles/framework.dir/device.cpp.s
 
 framework/CMakeFiles/framework.dir/device.cpp.o.requires:
 
@@ -1019,16 +1067,16 @@ framework/CMakeFiles/framework.dir/device.cpp.o.provides.build: framework/CMakeF
 
 framework/CMakeFiles/framework.dir/device_dtrack.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/device_dtrack.cpp.o: ../framework/device_dtrack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object framework/CMakeFiles/framework.dir/device_dtrack.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/device_dtrack.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device_dtrack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object framework/CMakeFiles/framework.dir/device_dtrack.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/device_dtrack.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device_dtrack.cpp
 
 framework/CMakeFiles/framework.dir/device_dtrack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/device_dtrack.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device_dtrack.cpp > CMakeFiles/framework.dir/device_dtrack.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device_dtrack.cpp > CMakeFiles/framework.dir/device_dtrack.cpp.i
 
 framework/CMakeFiles/framework.dir/device_dtrack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/device_dtrack.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/device_dtrack.cpp -o CMakeFiles/framework.dir/device_dtrack.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/device_dtrack.cpp -o CMakeFiles/framework.dir/device_dtrack.cpp.s
 
 framework/CMakeFiles/framework.dir/device_dtrack.cpp.o.requires:
 
@@ -1043,16 +1091,16 @@ framework/CMakeFiles/framework.dir/device_dtrack.cpp.o.provides.build: framework
 
 framework/CMakeFiles/framework.dir/devicemanager.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/devicemanager.cpp.o: ../framework/devicemanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object framework/CMakeFiles/framework.dir/devicemanager.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/devicemanager.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/devicemanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object framework/CMakeFiles/framework.dir/devicemanager.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/devicemanager.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/devicemanager.cpp
 
 framework/CMakeFiles/framework.dir/devicemanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/devicemanager.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/devicemanager.cpp > CMakeFiles/framework.dir/devicemanager.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/devicemanager.cpp > CMakeFiles/framework.dir/devicemanager.cpp.i
 
 framework/CMakeFiles/framework.dir/devicemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/devicemanager.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/devicemanager.cpp -o CMakeFiles/framework.dir/devicemanager.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/devicemanager.cpp -o CMakeFiles/framework.dir/devicemanager.cpp.s
 
 framework/CMakeFiles/framework.dir/devicemanager.cpp.o.requires:
 
@@ -1067,16 +1115,16 @@ framework/CMakeFiles/framework.dir/devicemanager.cpp.o.provides.build: framework
 
 framework/CMakeFiles/framework.dir/dtrack.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/dtrack.cpp.o: ../framework/dtrack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object framework/CMakeFiles/framework.dir/dtrack.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/dtrack.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/dtrack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object framework/CMakeFiles/framework.dir/dtrack.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/dtrack.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/dtrack.cpp
 
 framework/CMakeFiles/framework.dir/dtrack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/dtrack.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/dtrack.cpp > CMakeFiles/framework.dir/dtrack.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/dtrack.cpp > CMakeFiles/framework.dir/dtrack.cpp.i
 
 framework/CMakeFiles/framework.dir/dtrack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/dtrack.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/dtrack.cpp -o CMakeFiles/framework.dir/dtrack.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/dtrack.cpp -o CMakeFiles/framework.dir/dtrack.cpp.s
 
 framework/CMakeFiles/framework.dir/dtrack.cpp.o.requires:
 
@@ -1091,16 +1139,16 @@ framework/CMakeFiles/framework.dir/dtrack.cpp.o.provides.build: framework/CMakeF
 
 framework/CMakeFiles/framework.dir/resampler.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/resampler.cpp.o: ../framework/resampler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object framework/CMakeFiles/framework.dir/resampler.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/resampler.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/resampler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object framework/CMakeFiles/framework.dir/resampler.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/resampler.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/resampler.cpp
 
 framework/CMakeFiles/framework.dir/resampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/resampler.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/resampler.cpp > CMakeFiles/framework.dir/resampler.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/resampler.cpp > CMakeFiles/framework.dir/resampler.cpp.i
 
 framework/CMakeFiles/framework.dir/resampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/resampler.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/resampler.cpp -o CMakeFiles/framework.dir/resampler.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/resampler.cpp -o CMakeFiles/framework.dir/resampler.cpp.s
 
 framework/CMakeFiles/framework.dir/resampler.cpp.o.requires:
 
@@ -1115,16 +1163,16 @@ framework/CMakeFiles/framework.dir/resampler.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o: ../framework/rgbdsensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/rgbdsensor.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/rgbdsensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/rgbdsensor.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/rgbdsensor.cpp
 
 framework/CMakeFiles/framework.dir/rgbdsensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/rgbdsensor.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/rgbdsensor.cpp > CMakeFiles/framework.dir/rgbdsensor.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/rgbdsensor.cpp > CMakeFiles/framework.dir/rgbdsensor.cpp.i
 
 framework/CMakeFiles/framework.dir/rgbdsensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/rgbdsensor.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/rgbdsensor.cpp -o CMakeFiles/framework.dir/rgbdsensor.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/rgbdsensor.cpp -o CMakeFiles/framework.dir/rgbdsensor.cpp.s
 
 framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o.requires:
 
@@ -1139,16 +1187,16 @@ framework/CMakeFiles/framework.dir/rgbdsensor.cpp.o.provides.build: framework/CM
 
 framework/CMakeFiles/framework.dir/sensor.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sensor.cpp.o: ../framework/sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object framework/CMakeFiles/framework.dir/sensor.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sensor.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object framework/CMakeFiles/framework.dir/sensor.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sensor.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sensor.cpp
 
 framework/CMakeFiles/framework.dir/sensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/sensor.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sensor.cpp > CMakeFiles/framework.dir/sensor.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sensor.cpp > CMakeFiles/framework.dir/sensor.cpp.i
 
 framework/CMakeFiles/framework.dir/sensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/sensor.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sensor.cpp -o CMakeFiles/framework.dir/sensor.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sensor.cpp -o CMakeFiles/framework.dir/sensor.cpp.s
 
 framework/CMakeFiles/framework.dir/sensor.cpp.o.requires:
 
@@ -1163,16 +1211,16 @@ framework/CMakeFiles/framework.dir/sensor.cpp.o.provides.build: framework/CMakeF
 
 framework/CMakeFiles/framework.dir/stablesampler.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/stablesampler.cpp.o: ../framework/stablesampler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object framework/CMakeFiles/framework.dir/stablesampler.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/stablesampler.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/stablesampler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object framework/CMakeFiles/framework.dir/stablesampler.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/stablesampler.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/stablesampler.cpp
 
 framework/CMakeFiles/framework.dir/stablesampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/stablesampler.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/stablesampler.cpp > CMakeFiles/framework.dir/stablesampler.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/stablesampler.cpp > CMakeFiles/framework.dir/stablesampler.cpp.i
 
 framework/CMakeFiles/framework.dir/stablesampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/stablesampler.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/stablesampler.cpp -o CMakeFiles/framework.dir/stablesampler.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/stablesampler.cpp -o CMakeFiles/framework.dir/stablesampler.cpp.s
 
 framework/CMakeFiles/framework.dir/stablesampler.cpp.o.requires:
 
@@ -1187,16 +1235,16 @@ framework/CMakeFiles/framework.dir/stablesampler.cpp.o.provides.build: framework
 
 framework/CMakeFiles/framework.dir/sweepsampler.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sweepsampler.cpp.o: ../framework/sweepsampler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object framework/CMakeFiles/framework.dir/sweepsampler.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sweepsampler.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sweepsampler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object framework/CMakeFiles/framework.dir/sweepsampler.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sweepsampler.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sweepsampler.cpp
 
 framework/CMakeFiles/framework.dir/sweepsampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/sweepsampler.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sweepsampler.cpp > CMakeFiles/framework.dir/sweepsampler.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sweepsampler.cpp > CMakeFiles/framework.dir/sweepsampler.cpp.i
 
 framework/CMakeFiles/framework.dir/sweepsampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/sweepsampler.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/sweepsampler.cpp -o CMakeFiles/framework.dir/sweepsampler.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/sweepsampler.cpp -o CMakeFiles/framework.dir/sweepsampler.cpp.s
 
 framework/CMakeFiles/framework.dir/sweepsampler.cpp.o.requires:
 
@@ -1211,16 +1259,16 @@ framework/CMakeFiles/framework.dir/sweepsampler.cpp.o.provides.build: framework/
 
 framework/CMakeFiles/framework.dir/timevalue.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/timevalue.cpp.o: ../framework/timevalue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object framework/CMakeFiles/framework.dir/timevalue.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/timevalue.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/timevalue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object framework/CMakeFiles/framework.dir/timevalue.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/timevalue.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/timevalue.cpp
 
 framework/CMakeFiles/framework.dir/timevalue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/timevalue.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/timevalue.cpp > CMakeFiles/framework.dir/timevalue.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/timevalue.cpp > CMakeFiles/framework.dir/timevalue.cpp.i
 
 framework/CMakeFiles/framework.dir/timevalue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/timevalue.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/timevalue.cpp -o CMakeFiles/framework.dir/timevalue.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/timevalue.cpp -o CMakeFiles/framework.dir/timevalue.cpp.s
 
 framework/CMakeFiles/framework.dir/timevalue.cpp.o.requires:
 
@@ -1235,16 +1283,16 @@ framework/CMakeFiles/framework.dir/timevalue.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/udpconnection.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/udpconnection.cpp.o: ../framework/udpconnection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object framework/CMakeFiles/framework.dir/udpconnection.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/udpconnection.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/udpconnection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object framework/CMakeFiles/framework.dir/udpconnection.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/udpconnection.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/udpconnection.cpp
 
 framework/CMakeFiles/framework.dir/udpconnection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/udpconnection.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/udpconnection.cpp > CMakeFiles/framework.dir/udpconnection.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/udpconnection.cpp > CMakeFiles/framework.dir/udpconnection.cpp.i
 
 framework/CMakeFiles/framework.dir/udpconnection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/udpconnection.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/udpconnection.cpp -o CMakeFiles/framework.dir/udpconnection.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/udpconnection.cpp -o CMakeFiles/framework.dir/udpconnection.cpp.s
 
 framework/CMakeFiles/framework.dir/udpconnection.cpp.o.requires:
 
@@ -1259,16 +1307,16 @@ framework/CMakeFiles/framework.dir/udpconnection.cpp.o.provides.build: framework
 
 framework/CMakeFiles/framework.dir/window.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/window.cpp.o: ../framework/window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/window.cpp
 
 framework/CMakeFiles/framework.dir/window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/window.cpp.i"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/window.cpp > CMakeFiles/framework.dir/window.cpp.i
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/window.cpp > CMakeFiles/framework.dir/window.cpp.i
 
 framework/CMakeFiles/framework.dir/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/window.cpp.s"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework/window.cpp -o CMakeFiles/framework.dir/window.cpp.s
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/window.cpp -o CMakeFiles/framework.dir/window.cpp.s
 
 framework/CMakeFiles/framework.dir/window.cpp.o.requires:
 
@@ -1299,6 +1347,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/FileBuffer.cpp.o" \
 "CMakeFiles/framework.dir/GridFitter.cpp.o" \
 "CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o" \
+"CMakeFiles/framework.dir/KinectServer.cpp.o" \
 "CMakeFiles/framework.dir/MatrixInterpolation.cpp.o" \
 "CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o" \
 "CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o" \
@@ -1314,6 +1363,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/SampleFilter.cpp.o" \
 "CMakeFiles/framework.dir/Singleton.cpp.o" \
 "CMakeFiles/framework.dir/ThreadEvent.cpp.o" \
+"CMakeFiles/framework.dir/ZMQComManager.cpp.o" \
 "CMakeFiles/framework.dir/ZMQMessage.cpp.o" \
 "CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o" \
 "CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o" \
@@ -1354,6 +1404,7 @@ Debug/libframework.a: framework/CMakeFiles/framework.dir/EventData.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/FileBuffer.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/GridFitter.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o
+Debug/libframework.a: framework/CMakeFiles/framework.dir/KinectServer.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o
@@ -1369,6 +1420,7 @@ Debug/libframework.a: framework/CMakeFiles/framework.dir/PoseTracker.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/SampleFilter.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/Singleton.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o
+Debug/libframework.a: framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o
@@ -1391,9 +1443,9 @@ Debug/libframework.a: framework/CMakeFiles/framework.dir/udpconnection.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
 Debug/libframework.a: framework/CMakeFiles/framework.dir/build.make
 Debug/libframework.a: framework/CMakeFiles/framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Linking CXX static library ../Debug/libframework.a"
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean_target.cmake
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Linking CXX static library ../Debug/libframework.a"
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean_target.cmake
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 framework/CMakeFiles/framework.dir/build: Debug/libframework.a
@@ -1416,6 +1468,7 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/FileBuffer.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/GridFitter.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/KinectDaemonHandshake.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/KinectServer.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/MatrixInterpolation.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/NaturalNeighbourInterpolator.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/NearestNeighbourSearch.cpp.o.requires
@@ -1431,6 +1484,7 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/SampleFilter.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/Singleton.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ThreadEvent.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ZMQComManager.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ZMQMessage.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ZMQMessageEvent.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ZMQMessageReceiver.cpp.o.requires
@@ -1455,10 +1509,10 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 .PHONY : framework/CMakeFiles/framework.dir/requires
 
 framework/CMakeFiles/framework.dir/clean:
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean.cmake
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework && $(CMAKE_COMMAND) -P CMakeFiles/framework.dir/cmake_clean.cmake
 .PHONY : framework/CMakeFiles/framework.dir/clean
 
 framework/CMakeFiles/framework.dir/depend:
-	cd /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/framework/CMakeFiles/framework.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/framework/CMakeFiles/framework.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : framework/CMakeFiles/framework.dir/depend
 

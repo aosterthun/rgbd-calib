@@ -6,5 +6,5 @@ C_FLAGS = -g   -Wall
 
 C_DEFINES = 
 
-C_INCLUDES = -isystem /opt/OpenCV/opencv-2.4.10_without_ffmpeg/include -isystem /usr/include/x86_64-linux-gnu -I/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/src -I/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/src 
+C_INCLUDES = -isystem /usr/include/x86_64-linux-gnu -I/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glfw-3.0.3/src -I/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/cmake-build-debug/external/glfw-3.0.3/src 
 

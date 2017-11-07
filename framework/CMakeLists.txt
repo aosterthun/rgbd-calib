@@ -7,7 +7,7 @@ source_group("Inline Files" FILES ${FRAMEWORK_INLINE})
 add_library(framework STATIC glew.c
   ${FRAMEWORK_SOURCE}
   ${FRAMEWORK_INLINE}
-  ${FRAMEWORK_HEADER})
+  ${FRAMEWORK_HEADER} KinectServer.cpp KinectServer.hpp ZMQComManager.cpp ZMQComManager.hpp NotImplementedException.hpp)
 
 target_include_directories(framework PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

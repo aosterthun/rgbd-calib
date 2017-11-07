@@ -54,8 +54,6 @@ private:
 public:
 	PlayCommand();
     void execute(std::shared_ptr<Event> _event);
-    void set_filename(std::string const& _filename);
-    std::string get_filename();
 	void listen_on_backchannel();
 	void send_on_backchannel(int const _status);
 	void filename(std::string const& _filename);

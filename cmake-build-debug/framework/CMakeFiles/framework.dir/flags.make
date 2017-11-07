@@ -7,11 +7,11 @@ C_FLAGS = -g   -frounding-math -std=c++11 -Wall -Wextra
 
 C_DEFINES = -DGLEW_STATIC
 
-C_INCLUDES = -isystem /opt/OpenCV/opencv-2.4.10_without_ffmpeg/include -isystem /usr/include/x86_64-linux-gnu -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glm-0.9.5.3 -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/catch-1.1 -I/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework 
+C_INCLUDES = -isystem /usr/include/x86_64-linux-gnu -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glm-0.9.5.3 -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/squish -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/catch-1.1 -I/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework 
 
 CXX_FLAGS = -g   -frounding-math -std=c++11 -Wall -Wextra
 
 CXX_DEFINES = -DGLEW_STATIC
 
-CXX_INCLUDES = -isystem /opt/OpenCV/opencv-2.4.10_without_ffmpeg/include -isystem /usr/include/x86_64-linux-gnu -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glm-0.9.5.3 -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/catch-1.1 -I/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/framework 
+CXX_INCLUDES = -isystem /usr/include/x86_64-linux-gnu -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glm-0.9.5.3 -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/squish -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/catch-1.1 -I/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework 
 

@@ -14,25 +14,12 @@
 #include <Event.hpp>
 #include <EventData.hpp>
 
-template<class T>
 class ThreadEvent : public Event{
 private:
-	unsigned id;
-	std::shared_ptr<EventData<T>> event_data;
+	std::string data;
 public:
-	ThreadEvent(unsigned _id)
-	{
-		this->id = _id;
-		this->event_data = std::make_shared<EventData<T>>();
-	}
-	unsigned get_id()
-	{
-		return this->id;
-	}
-	std::shared_ptr<EventData<T>> get_event_data()
-	{
-		return this->event_data;
-	}
+	ThreadEvent(std::string const& _data);
+	std::string get_data();
 };
 
 #endif /* ThreadEvent_hpp */

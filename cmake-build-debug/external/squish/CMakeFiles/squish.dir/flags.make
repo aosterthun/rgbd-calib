@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -msse2
 
 CXX_DEFINES = -DSQUISH_USE_SSE=2
 
-CXX_INCLUDES = -isystem /opt/OpenCV/opencv-2.4.10_without_ffmpeg/include -isystem /usr/include/x86_64-linux-gnu -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/glm-0.9.5.3 -I/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/external/squish 
+CXX_INCLUDES = -isystem /usr/include/x86_64-linux-gnu -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glfw-3.0.3/include -isystem /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/glm-0.9.5.3 -I/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/external/squish 
 

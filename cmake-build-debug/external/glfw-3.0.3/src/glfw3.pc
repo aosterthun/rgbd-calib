@@ -1,4 +1,4 @@
-prefix=/home/mejo6715/Hiwi/Kinect_Daemon/rgbd-calib/install
+prefix=/home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/install
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
