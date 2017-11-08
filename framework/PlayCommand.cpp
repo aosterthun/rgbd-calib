@@ -18,9 +18,7 @@ PlayCommand::PlayCommand()
 
 void PlayCommand::listen_on_backchannel()
 {
-    std::cout << this->get_backchannel_port(true)[1] << std::endl;
-	this->zmq_sub_socket->connect(this->get_backchannel_port(true)[0]+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-    std::cout << "backchannel: " << this->get_backchannel_port(true)[0]+std::to_string(std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1) << std::endl;
+	this->zmq_sub_socket->connect(this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
 	while (true) {
 		std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
 		
@@ -52,7 +50,7 @@ void PlayCommand::listen_on_backchannel()
 void PlayCommand::send_on_backchannel(const int _status)
 {
 	std::cout << "PlayCommand::send_on_backchannel(const int _status)" << std::endl;
-	this->zmq_pub_socket->connect("tcp://127.0.0.1:8001");
+	this->zmq_pub_socket->connect("tcp://0.0.0.0:"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
 	sleep(1);
 	CommandStatus _cmd_status = static_cast<CommandStatus>(_status);
 	std::stringstream _cmd_status_stream;
@@ -63,7 +61,7 @@ void PlayCommand::send_on_backchannel(const int _status)
 	memcpy(_cmd_status_msg.data(), _cmd_status_msg_str.data(), _cmd_status_msg_str.length());
 	this->zmq_pub_socket->send(_cmd_status_msg);
 
-	this->zmq_pub_socket->disconnect("tcp://127.0.0.1:8001");
+	this->zmq_pub_socket->disconnect("tcp://0.0.0.0:" + std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
 	
 }
 
@@ -90,10 +88,10 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
     std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
     this->set_backchannel_com_port(_thread_event->get_data());
 	std::shared_ptr<std::thread> _backchannel_listen_thread = std::make_shared<std::thread>(&PlayCommand::listen_on_backchannel,this);
-	//this->send_on_backchannel(CommandStatus::STARTED);
+	this->send_on_backchannel(CommandStatus::STARTED);
     std::cout << "PlayCommand::execute()" << std::endl;
 	sleep(20);
-	//this->send_on_backchannel(CommandStatus::FINISHED);
+	this->send_on_backchannel(CommandStatus::FINISHED);
 	
 	//this->notify();
 	_backchannel_listen_thread->join();
