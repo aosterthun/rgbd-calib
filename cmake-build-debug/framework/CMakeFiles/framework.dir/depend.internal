@@ -805,13 +805,17 @@ framework/CMakeFiles/framework.dir/PlayCommand.cpp.o
  ../framework/AbstractObserver.hpp
  ../framework/CommandStatus.hpp
  ../framework/Event.hpp
+ ../framework/EventData.hpp
  ../framework/Observable.hpp
+ ../framework/ThreadEvent.hpp
  /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommand.cpp
  /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommand.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o
  ../framework/AbstractObserver.hpp
  ../framework/CommandStatus.hpp
+ ../framework/EventData.hpp
  ../framework/Observable.hpp
+ ../framework/ThreadEvent.hpp
  /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractCommand.hpp
  /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/AbstractFactory.hpp
  /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/Event.hpp

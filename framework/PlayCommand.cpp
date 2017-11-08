@@ -19,8 +19,8 @@ PlayCommand::PlayCommand()
 void PlayCommand::listen_on_backchannel()
 {
     std::cout << this->get_backchannel_port(true)[1] << std::endl;
-	this->zmq_sub_socket->connect("tcp://"+this->get_backchannel_port(true)[0]+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-    std::cout << "backchannel: " << "tcp://"+this->get_backchannel_port(true)[0]+std::to_string(std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1) << std::endl;
+	this->zmq_sub_socket->connect(this->get_backchannel_port(true)[0]+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
+    std::cout << "backchannel: " << this->get_backchannel_port(true)[0]+std::to_string(std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1) << std::endl;
 	while (true) {
 		std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
 		
@@ -70,10 +70,11 @@ void PlayCommand::send_on_backchannel(const int _status)
 std::vector<std::string> PlayCommand::get_backchannel_port(bool _seperated) {
     std::vector<std::string> _port;
     if(_seperated){
-        _port.push_back(this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":")));
-        std::cout << this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":")) << std::endl;
-        _port.push_back(this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":")+1,this->cmd_backchannel_com_port.length()));
-        std::cout << this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":")+1,this->cmd_backchannel_com_port.length()) << std::endl;
+        size_t _first = this->cmd_backchannel_com_port.find(":");
+        _port.push_back(this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)));
+        std::cout << this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)) << std::endl;
+        _port.push_back(this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()));
+        std::cout << this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()) << std::endl;
     }else{
         _port.push_back(this->cmd_backchannel_com_port);
     }

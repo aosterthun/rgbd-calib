@@ -804,13 +804,17 @@ framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/AbstractComma
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/AbstractObserver.hpp
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/CommandStatus.hpp
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/Event.hpp
+framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/EventData.hpp
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/Observable.hpp
+framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/ThreadEvent.hpp
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/PlayCommand.cpp
 framework/CMakeFiles/framework.dir/PlayCommand.cpp.o: ../framework/PlayCommand.hpp
 
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/AbstractObserver.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/CommandStatus.hpp
+framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/EventData.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/Observable.hpp
+framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/ThreadEvent.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/AbstractCommand.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/AbstractFactory.hpp
 framework/CMakeFiles/framework.dir/PlayCommandFactory.cpp.o: ../framework/Event.hpp

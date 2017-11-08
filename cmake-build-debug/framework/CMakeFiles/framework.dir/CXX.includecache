@@ -915,6 +915,8 @@ Observable.hpp
 -
 CommandStatus.hpp
 -
+ThreadEvent.hpp
+-
 
 ../framework/PoseTracker.hpp
 glm/gtc/matrix_transform.hpp
@@ -1676,6 +1678,8 @@ AbstractCommand.hpp
 Observable.hpp
 -
 CommandStatus.hpp
+-
+ThreadEvent.hpp
 -
 
 /home/arne/Documents/Hiwi/KinectDaemon/rgbd-calib/framework/PlayCommandFactory.cpp

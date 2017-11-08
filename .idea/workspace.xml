@@ -41,11 +41,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3a639ead-40b9-4eaf-9cee-eeb62f58a22f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/framework/CMakeFiles/framework.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/source/CMakeFiles/kinect_server.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/source/CMakeFiles/kinect_server.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/PlayCommand.cpp" afterPath="$PROJECT_DIR$/framework/PlayCommand.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/PlayCommand.hpp" afterPath="$PROJECT_DIR$/framework/PlayCommand.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/ZMQComManager.cpp" afterPath="$PROJECT_DIR$/framework/ZMQComManager.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/ZMQMessageReceiver.cpp" afterPath="$PROJECT_DIR$/framework/ZMQMessageReceiver.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/ZMQMessageResolver.cpp" afterPath="$PROJECT_DIR$/framework/ZMQMessageResolver.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,8 +80,8 @@
       <file leaf-file-name="ZMQMessageResolver.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/ZMQMessageResolver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+            <state relative-caret-position="217">
+              <caret line="81" column="63" lean-forward="false" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayCommand.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayCommand.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/PlayCommand.hpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -109,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayCommand.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayCommand.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/PlayCommand.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="372">
+              <caret line="76" column="108" lean-forward="false" selection-start-line="76" selection-start-column="108" selection-end-line="76" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -156,9 +156,9 @@
         <option value="$PROJECT_DIR$/framework/ZMQMessageResolver.hpp" />
         <option value="$PROJECT_DIR$/framework/ZMQMessageReceiver.cpp" />
         <option value="$PROJECT_DIR$/framework/ZMQComManager.cpp" />
-        <option value="$PROJECT_DIR$/framework/PlayCommand.cpp" />
         <option value="$PROJECT_DIR$/framework/ZMQMessageResolver.cpp" />
         <option value="$PROJECT_DIR$/framework/PlayCommand.hpp" />
+        <option value="$PROJECT_DIR$/framework/PlayCommand.cpp" />
       </list>
     </option>
   </component>
@@ -375,7 +375,7 @@
       <workItem from="1509990693516" duration="68000" />
       <workItem from="1509990874913" duration="820000" />
       <workItem from="1510052529499" duration="20918000" />
-      <workItem from="1510130283450" duration="4792000" />
+      <workItem from="1510130283450" duration="5487000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed cmake issue with boost serialization linker flag. &#10;Fixed zmq messaging errors.">
       <created>1508854219681</created>
@@ -391,11 +391,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510080728171</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Multithreading ftw">
+      <created>1510135724074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510135724074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49185000" />
+    <option name="totallyTimeSpent" value="49880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -826,14 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/PlayCommand.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/ZMQMessageReceiver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -844,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/ZMQMessageResolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+        <state relative-caret-position="217">
+          <caret line="81" column="63" lean-forward="false" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -857,6 +856,14 @@
           <folding>
             <element signature="e#188#206#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/PlayCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="76" column="108" lean-forward="false" selection-start-line="76" selection-start-column="108" selection-end-line="76" selection-end-column="108" />
+          <folding />
         </state>
       </provider>
     </entry>

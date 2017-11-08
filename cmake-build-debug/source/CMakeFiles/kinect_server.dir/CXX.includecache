@@ -133,6 +133,8 @@ Observable.hpp
 -
 CommandStatus.hpp
 -
+ThreadEvent.hpp
+-
 
 ../framework/ThreadEvent.hpp
 stdio.h
