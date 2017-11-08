@@ -30,7 +30,7 @@ void ZMQComManager::listen_for_new_connections() {
 
             sleep(1);
 
-            std::string com_port = "192.168.188.105:8006";
+            std::string com_port = "192.168.188.105:8001";
 
             KinectDaemonHandshake _repl_handshake{};
             _repl_handshake.client_ip(com_port);
@@ -46,7 +46,7 @@ void ZMQComManager::listen_for_new_connections() {
             memcpy(_send_repl_handshake.data(), _repl_handshake_msg_str.data(), _repl_handshake_msg_str.size());
             _pub_skt->send(_send_repl_handshake);
 
-            std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_recv_handshake->client_ip());
+            std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_recv_handshake->client_ip()+":8001");
             this->notify(_thread_event);
         }
     }

@@ -52,7 +52,7 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
     zmq::context_t _ctx(1);
     zmq::socket_t _skt(_ctx, ZMQ_SUB);
     _skt.setsockopt(ZMQ_SUBSCRIBE,"",0);
-    _skt.connect("tcp://"+_server+":8006");
+    _skt.connect("tcp://"+_server);
     sleep(1);
     while (true) {
         std::shared_ptr<std::vector<std::shared_ptr<zmq::message_t>>> _messages = std::make_shared<std::vector<std::shared_ptr<zmq::message_t>>>();
@@ -74,7 +74,7 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
         }
 
         std::shared_ptr<ZMQMessageEvent> _message_event = std::make_shared<ZMQMessageEvent>(_messages);
-        _message_event->set_event_message("test");
+        _message_event->set_event_message("tcp://"+_server);
         this->notify(_message_event);
     }
     std::cout << "[END] void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Event> _event)" << std::endl;

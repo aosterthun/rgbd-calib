@@ -15,12 +15,12 @@ ZMQMessageResolver::ZMQMessageResolver()
 
 ZMQMessageResolver::~ZMQMessageResolver()
 {
-	
+
 }
 
 void ZMQMessageResolver::update(Observable* _observable)
 {
-	std::cout << "ZMQMessageResolver::update(Observable* _observable)" << std::endl;
+    throw NotImplemented();
 }
 
 void ZMQMessageResolver::update(std::shared_ptr<Observable> _observable)
@@ -30,7 +30,7 @@ void ZMQMessageResolver::update(std::shared_ptr<Observable> _observable)
 
 void ZMQMessageResolver::update(Observable* _observable, std::shared_ptr<Event> _event)
 {
-	std::cout << "ZMQMessageResolver::update(Observable* _observable, std::shared_ptr<Event> _event)" << std::endl;
+    throw NotImplemented();
 }
 
 void ZMQMessageResolver::update(std::shared_ptr<Observable> _observable, std::shared_ptr<Event> _event)
@@ -92,8 +92,9 @@ void ZMQMessageResolver::resolve_message(std::shared_ptr<Event> _event, unsigned
     std::cout << "2" << std::endl;
 	_cmd_archive & _cmd;
     std::cout << "3" << std::endl;
-	
-	//_cmd.execute(std::make_shared<Event>());
+
+    std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_zmq_event->get_event_message());
+	_cmd.execute(_thread_event);
 
 	std::lock_guard<std::mutex> _lock{*this->thread_mutex};
 	this->finished_threads.push_back(_unique_thread_id);
