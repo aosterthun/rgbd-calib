@@ -6,6 +6,13 @@
 
 #include <iostream>
 
+struct GenericMessage
+{
+  unsigned type;
+  unsigned size_payload_byte;
+  std::vector<unsigned> vector_payload;
+  std::string string_payload;
+};
 
 int main(int argc, char* argv[]){
 
@@ -17,28 +24,38 @@ int main(int argc, char* argv[]){
 
   zmq::context_t ctx(1); // means single threaded
   zmq::socket_t  socket(ctx, ZMQ_SUB); // means a subscriber
-  socket.setsockopt(ZMQ_SUBSCRIBE, "", 0);;
-#if ZMQ_VERSION_MAJOR < 3
-  uint64_t hwm = 1;
-  socket.setsockopt(ZMQ_HWM,&hwm, sizeof(hwm));
-#else
-  uint32_t hwm = 1;
+  socket.setsockopt(ZMQ_SUBSCRIBE, "", 0);
+  uint32_t hwm = 10000;
   socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
-#endif 
   std::string endpoint("tcp://" + socket_name);
   socket.connect(endpoint.c_str());
 
+
   while(true){
-
-
-
-    zmq::message_t zmqm(sizeof(glm::mat4));
-    socket.recv(&zmqm);
-
-    glm::mat4 pose;
-    memcpy( glm::value_ptr(pose), (const unsigned char* ) zmqm.data(), sizeof(glm::mat4));
+    zmq::message_t zmqm;
+    socket.recv(&zmqm, 0);
+    GenericMessage msg;
     
-    std::cout << "received: " << pose << std::endl;
+    memcpy( (unsigned char*) &msg.type, ((const unsigned char* ) zmqm.data()), sizeof(unsigned));
+    memcpy( (unsigned char*) &msg.size_payload_byte, ((const unsigned char* ) zmqm.data()) + sizeof(unsigned), sizeof(unsigned));
+
+    if(msg.type == 0){
+      msg.vector_payload = std::vector<unsigned>(msg.size_payload_byte/sizeof(unsigned));
+
+      memcpy( (unsigned char*) &msg.vector_payload[0], ((const unsigned char* ) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);    
+
+      for(auto i : msg.vector_payload)
+      {
+        std::cout << i << std::endl;
+      }
+    }else if(msg.type == 1){
+      memcpy( (unsigned char*) msg.string_payload.c_str(), ((const unsigned char* ) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);    
+      msg.string_payload = std::string(msg.string_payload.c_str());
+      std::cout << msg.string_payload << std::endl;
+    }
+    
+
+    //std::cout << msg.size_payload_byte << std::endl;
 
   }
 
