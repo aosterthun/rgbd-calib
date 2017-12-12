@@ -33,7 +33,6 @@ int main(int argc, char* argv[]){
   std::srand(std::time(0));
 
 
-  unsigned tick = 0;
   while(true){
     int rand_num = std::rand() % 100;
     GenericMessage msg;
@@ -61,15 +60,6 @@ int main(int argc, char* argv[]){
       socket.send(zmqm);
       std::cout << "sending: " << msg.string_payload << std::endl;
     }
-
-    
-
-    
-    if(tick > 9)
-    {
-      break;
-    }
-    ++tick;
   }
 
 

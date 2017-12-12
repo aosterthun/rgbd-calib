@@ -50,6 +50,7 @@ int main(int argc, char* argv[]){
       }
     }else if(msg.type == 1){
       memcpy( (unsigned char*) msg.string_payload.c_str(), ((const unsigned char* ) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);    
+      msg.string_payload.reserve(msg.size_payload_byte);
       msg.string_payload = std::string(msg.string_payload.c_str());
       std::cout << msg.string_payload << std::endl;
     }
