@@ -6,7 +6,15 @@
 #include <unistd.h>
 
 #include <iostream>
+#include <sstream>
 #include <ctime>
+
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
+#include <PlayCommand.hpp>
+
+
 struct GenericMessage
 {
   unsigned type;
@@ -44,7 +52,13 @@ int main(int argc, char* argv[]){
       //msg.string_payload += std::to_string(i);
     }
 
-    msg.string_payload = "22 serialization::archive 12 0 0 8 test.txt 0  0 0 0 0 0 0";
+    PlayCommand play;
+    play.filename("test.txt");
+    std::stringstream sstream{};
+    boost::archive::text_oarchive oarchive{sstream};
+    oarchive << play;
+    msg.string_payload = sstream.str();
+    std::cout << msg.string_payload << std::endl;
     if(msg.type == 0){
       msg.size_payload_byte = rand_num * sizeof(unsigned);      
       zmq::message_t zmqm(2*sizeof(unsigned) + msg.size_payload_byte);
@@ -58,8 +72,11 @@ int main(int argc, char* argv[]){
       memcpy( ((unsigned char* ) zmqm.data()), (const unsigned char*) &msg.type, sizeof(unsigned));
       memcpy( ((unsigned char* ) zmqm.data()) + sizeof(unsigned), (const unsigned char*) &msg.size_payload_byte, sizeof(unsigned));
       memcpy( ((unsigned char* ) zmqm.data()) + 2*sizeof(unsigned), (const unsigned char*) msg.string_payload.c_str(), msg.size_payload_byte);
+/*      std::string check;
+      memcpy( (unsigned char* ) check.c_str(), ((const unsigned char*) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);
+      std::cout << "test:: " << check.c_str() << std::endl;*/
       socket.send(zmqm);
-      std::cout << "sending: " << msg.string_payload << std::endl;
+      std::cout << "sending: " << msg.size_payload_byte << std::endl;
     }
   }
 

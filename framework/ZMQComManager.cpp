@@ -30,7 +30,7 @@ void ZMQComManager::listen_for_new_connections() {
 
             sleep(1);
 
-            std::string com_port = "192.168.188.105:8001";
+            std::string com_port = "141.54.147.101:8001";
 
             KinectDaemonHandshake _repl_handshake{};
             _repl_handshake.client_ip(com_port);

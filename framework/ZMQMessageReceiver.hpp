@@ -23,6 +23,7 @@
 #include <NotImplementedException.hpp>
 #include <ThreadEvent.hpp>
 #include <mutex>
+#include <GenericMessage.hpp>
 
 class ZMQMessageReceiver : public Observable , public AbstractObserver
 {
@@ -35,7 +36,7 @@ private:
     
 public:
     ZMQMessageReceiver();
-    void receive(std::string const &_server, std::shared_ptr<Event> _event);
+    void receive(std::string const &_server, std::shared_ptr<Event> _event, unsigned _unique_thread_id);
     virtual void update(std::shared_ptr<Observable> _observable);
     virtual void update(Observable* _observable);
     virtual void update(std::shared_ptr<Observable> _observable, std::shared_ptr<Event> _event);

@@ -2,6 +2,14 @@ add_executable(kinect_server kinect_server.cpp)
 target_link_libraries(kinect_server framework)
 install(TARGETS kinect_server DESTINATION bin)
 
+add_executable(boost_sender boost_sender.cpp)
+target_link_libraries(boost_sender framework)
+install(TARGETS boost_sender DESTINATION bin)
+
+add_executable(boost_receiver boost_receiver.cpp)
+target_link_libraries(boost_receiver framework)
+install(TARGETS boost_receiver DESTINATION bin)
+
 add_executable(measure_pose_offset measure_pose_offset.cpp)
 target_link_libraries(measure_pose_offset framework)
 install(TARGETS measure_pose_offset DESTINATION bin)

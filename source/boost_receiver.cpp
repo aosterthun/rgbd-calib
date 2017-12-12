@@ -6,6 +6,11 @@
 
 #include <iostream>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
+#include <PlayCommand.hpp>
+
 struct GenericMessage
 {
   unsigned type;
@@ -49,10 +54,13 @@ int main(int argc, char* argv[]){
         std::cout << i << std::endl;
       }
     }else if(msg.type == 1){
-      memcpy( (unsigned char*) msg.string_payload.c_str(), ((const unsigned char* ) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);    
+      memcpy( (unsigned char*) msg.string_payload.c_str(), ((const unsigned char*) zmqm.data()) + 2*sizeof(unsigned), msg.size_payload_byte);    
       //msg.string_payload.reserve(msg.size_payload_byte);
       //msg.string_payload = std::string(msg.string_payload.c_str());
-      std::cout << msg.string_payload.c_str() << std::endl;
+      //std::cout << msg.size_payload_byte << std::endl;
+      std::cout << (msg.string_payload.c_str())<< std::endl;
+      std::string real_string{msg.string_payload.c_str()};
+      //printf("%s\n", msg.string_payload.c_str());
     }
     
 
