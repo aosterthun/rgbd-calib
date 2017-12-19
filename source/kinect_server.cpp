@@ -9,6 +9,6 @@
 #include <KinectServer.hpp>
 
 int main(int argc, const char * argv[]) {
-    KinectServer _server;
+    KinectServer _server("141.54.147.108");
     _server.start();
 }

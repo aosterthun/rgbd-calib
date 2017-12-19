@@ -38,8 +38,10 @@ private:
 	unsigned cmd_max_fps;
 	bool cmd_rgb_is_compressed;
 	bool cmd_loop;
+	bool is_running;
 	int cmd_startframe;
 	int cmd_endframe;
+
 
 	
 	friend class boost::serialization::access;

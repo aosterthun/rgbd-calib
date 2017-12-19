@@ -73,9 +73,7 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
         memcpy((unsigned char*) &size_payload_byte, ((const unsigned char*)_msg.data()) + sizeof(int), sizeof(unsigned));
         std::cout << size_payload_byte << std::endl;
         memcpy((unsigned char*) first.c_str(), ((const unsigned char*)_msg.data()) + sizeof(int) + sizeof(unsigned), size_payload_byte);
-       /* std::cout << (first.c_str())<< std::endl;
-        std::string real_string{first.c_str()};
-        std::cout << "test4" << std::endl;*/
+
         std::stringstream myStreamString;
         myStreamString << first.c_str();
         std::string myString = myStreamString.str();
@@ -83,18 +81,16 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
 
 
 
-      
-
         std::stringstream _cmd_stream{myString};
         boost::archive::text_iarchive _cmd_archive{_cmd_stream};
         _cmd_archive >> _cmd;
-        std::cout << _cmd.filename() << std::endl;
 
+        std::shared_ptr<ThreadEvent> _message_event = std::make_shared<ThreadEvent>("tcp://"+_server);
+        _cmd.execute(_message_event);
 
-        /*std::shared_ptr<ZMQMessageEvent> _message_event = std::make_shared<ZMQMessageEvent>(_messages);
-        _message_event->set_event_message("tcp://"+_server);
-        this->notify(_message_event);*/    
-        //free(test_payload);
+        std::lock_guard<std::mutex> _lock{*this->thread_mutex};
+        this->finished_threads.push_back(_unique_thread_id);
+
     }
     
 

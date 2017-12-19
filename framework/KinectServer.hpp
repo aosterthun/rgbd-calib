@@ -21,13 +21,10 @@
 
 class KinectServer : public Observable {
 public:
+	KinectServer(std::string const& _serverport);
     void start();
-    void receive(unsigned _unique_thread_id, std::string const& _com_port);
 private:
-    std::map<unsigned, std::shared_ptr<boost::thread>> running_threads;
-    std::vector<unsigned> finished_threads;
-    unsigned unique_thread_id;
-    std::shared_ptr<std::mutex> thread_mutex;
+	std::string serverport;
 };
 
 

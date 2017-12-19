@@ -14,7 +14,10 @@
 
 class ZMQComManager : public Observable{
 public:
+	ZMQComManager(std::string const& _serverport);
     void listen_for_new_connections();
+private:
+	std::string serverport;
 };
 
 
