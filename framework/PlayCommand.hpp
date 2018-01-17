@@ -22,6 +22,11 @@
 #include <Observable.hpp>
 #include <CommandStatus.hpp>
 #include <ThreadEvent.hpp>
+#include <FileBuffer.hpp>
+#include <ZMQPortManager.hpp>
+#include <boost/asio.hpp>
+#include <sensor.hpp>
+#include <clock.hpp>
 
 class ZMQMessagingChannel;
 

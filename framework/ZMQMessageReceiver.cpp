@@ -58,30 +58,14 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
 
     
     while(true){
-        std::cout << "test1" << std::endl;
         zmq::message_t _msg;
         
         _skt.recv(&_msg, 0);
-        std::cout << "test2" << std::endl;
-        int type;
-        unsigned size_payload_byte;
-        std::string first;
-        //char* test_payload;
+    
+        GenericMessage _gen_msg(&_msg);
         PlayCommand _cmd;
-        std::cout << "test3" << std::endl;
-        memcpy((unsigned char*) &type,((const unsigned char*)_msg.data()),sizeof(int));
-        memcpy((unsigned char*) &size_payload_byte, ((const unsigned char*)_msg.data()) + sizeof(int), sizeof(unsigned));
-        std::cout << size_payload_byte << std::endl;
-        memcpy((unsigned char*) first.c_str(), ((const unsigned char*)_msg.data()) + sizeof(int) + sizeof(unsigned), size_payload_byte);
 
-        std::stringstream myStreamString;
-        myStreamString << first.c_str();
-        std::string myString = myStreamString.str();
-        std::cout << myString << std::endl;
-
-
-
-        std::stringstream _cmd_stream{myString};
+        std::stringstream _cmd_stream{_gen_msg.payload()};
         boost::archive::text_iarchive _cmd_archive{_cmd_stream};
         _cmd_archive >> _cmd;
 
@@ -96,45 +80,3 @@ void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Eve
 
     std::cout << "[END] void ZMQMessageReceiver::receive(std::string const &_server, std::shared_ptr<Event> _event)" << std::endl;
 }
-/*
-void ZMQMessageReceiver::start_listening()
-{
-    zmq::context_t _ctx(1);
-    zmq::socket_t _skt(_ctx, ZMQ_SUB);
-    _skt.setsockopt(ZMQ_SUBSCRIBE, "", 0);
-    _skt.bind("tcp://" + this->server);
-	
-	while (true){
-		std::shared_ptr<std::vector<std::shared_ptr<zmq::message_t>>> _messages = std::make_shared<std::vector<std::shared_ptr<zmq::message_t>>>();
-		while (true) {
-			std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
-			
-			if(_skt.recv(_msg.get()))
-			{
-				std::cout << "Received message" << std::endl;
-				int64_t more = 0;
-				size_t more_size = sizeof(more);
-				_skt.getsockopt(ZMQ_RCVMORE, &more, &more_size);
-				if(more)
-				{
-					_messages->push_back(_msg);
-				}
-				else
-				{
-					_messages->push_back(_msg);
-					break;
-				}
-			}
-		}
-		std::shared_ptr<ZMQMessageEvent> _event = std::make_shared<ZMQMessageEvent>(_messages);
-		_event->set_event_message("Hallo Welt");
-		
-		this->notify(_event);
-	}
-}
-
-void ZMQMessageReceiver::set_server(const std::string &server)
-{
-    this->server = server;
-}
-*/

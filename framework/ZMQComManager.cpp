@@ -19,7 +19,6 @@ void ZMQComManager::listen_for_new_connections() {
     sleep(1);
     while(true){
         std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
-        std::cout << "Start" << std::endl;
         if (_sub_skt->recv(_msg.get())) {
             std::cout << "Received message" << std::endl;
             std::shared_ptr<KinectDaemonHandshake> _recv_handshake = std::make_shared<KinectDaemonHandshake>();

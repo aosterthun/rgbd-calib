@@ -15,3 +15,11 @@ ThreadEvent::ThreadEvent(std::string const &_data) {
 std::string ThreadEvent::get_data() {
     return this->data;
 }
+
+void ThreadEvent::set_cmd(std::shared_ptr<AbstractCommand> _cmd){
+	this->cmd = _cmd;
+}
+
+std::shared_ptr<AbstractCommand> ThreadEvent::get_cmd(){
+	return this->cmd;
+}

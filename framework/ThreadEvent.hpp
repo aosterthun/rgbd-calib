@@ -13,12 +13,16 @@
 #include <memory>
 #include <Event.hpp>
 #include <EventData.hpp>
+#include <AbstractCommand.hpp>
 
 class ThreadEvent : public Event{
 private:
 	std::string data;
+	std::shared_ptr<AbstractCommand> cmd;
 public:
 	ThreadEvent(std::string const& _data);
+	void set_cmd(std::shared_ptr<AbstractCommand> _cmd);
+	std::shared_ptr<AbstractCommand> get_cmd();
 	std::string get_data();
 };
 

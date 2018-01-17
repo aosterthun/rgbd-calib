@@ -24,6 +24,7 @@ PlayCommand::PlayCommand()
 	cmd_loop = false;
 	cmd_startframe = 0;
 	cmd_endframe = 0;
+	this->is_running = true;
 }
 
 void PlayCommand::listen_on_backchannel()
@@ -51,6 +52,11 @@ void PlayCommand::listen_on_backchannel()
 					this->is_running = false;
 					std::cout << "[PAUSE]" << std::endl;
 					this->send_on_backchannel(CommandStatus::PAUSED);
+					break;
+				case UNPAUSE:
+					this->is_running = true;
+					std::cout << "[UNPAUSE]" << std::endl;
+					this->send_on_backchannel(CommandStatus::UNPAUSED);
 					break;
 					
 				default:
@@ -98,25 +104,82 @@ void PlayCommand::set_backchannel_com_port(std::string const &_com_port) {
 void PlayCommand::execute(std::shared_ptr<Event> _event)
 {
 	std::cout << "[START] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
-	this->is_running = true;
     std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
     this->set_backchannel_com_port(_thread_event->get_data());
+    std::cout << "[FILENAME]: " << this->filename() << std::endl;
 	std::shared_ptr<std::thread> _backchannel_listen_thread = std::make_shared<std::thread>(&PlayCommand::listen_on_backchannel,this);
 	this->send_on_backchannel(CommandStatus::STARTED);
-    std::cout << "PlayCommand::execute()" << std::endl;
-    int i = 0;
-	while(this->is_running){
-		if (i == 300){
-			i = 0;
-			std::cout << "Restart stream" << std::endl;
-		}
-		sleep(1);
-		std::cout << "Play frame no: " + std::to_string(i) << std::endl;
-		++i;
+
+	std::cout << ZMQPortManager::get_instance().get_next_free_port() << std::endl;
+
+
+
+	unsigned num_kinect_cameras = 4;
+	bool rgb_is_compressed = true;
+	float max_fps = 20.0;
+
+	unsigned min_frame_time_ns = 1000000000/max_fps;
+
+	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
+	const unsigned depthsize = 512 * 424 * sizeof(float);
+
+	FileBuffer fb(this->filename().c_str());
+	if(!fb.open("r")){
+		std::cerr << "error opening  exiting..." << std::endl;
+
 	}
+	fb.setLooping(true);
+
+
+	zmq::context_t ctx(1); // means single threaded
+	zmq::socket_t  socket(ctx, ZMQ_PUB); // means a publisher
+	#if ZMQ_VERSION_MAJOR < 3
+	uint64_t hwm = 1;
+	socket.setsockopt(ZMQ_HWM,&hwm, sizeof(hwm));
+	#else
+	uint32_t hwm = 1;
+	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
+	#endif 
+	std::string endpoint("tcp://127.0.0.1:7000");
+	socket.bind(endpoint.c_str());
+
+	sensor::timevalue ts(sensor::clock::time());
+
+
+	while(true){
+		std::cout << this->is_running << std::endl;
+		while(this->is_running){
+			zmq::message_t zmqm((colorsize + depthsize) * num_kinect_cameras);
+
+			unsigned offset = 0;
+			for(unsigned i = 0; i < num_kinect_cameras; ++i){
+				fb.read((unsigned char*) zmqm.data() + offset, colorsize);
+				offset += colorsize;
+				fb.read((unsigned char*) zmqm.data() + offset, depthsize);
+				offset += depthsize;
+			}
+
+			// send frames
+			socket.send(zmqm);
+
+			// check if fps is correct
+			sensor::timevalue ts_now = sensor::clock::time();
+			long long time_spent_ns = (ts_now - ts).nsec();
+			long long rest_sleep_ns = min_frame_time_ns - time_spent_ns;
+			ts = ts_now;
+			if(0 < rest_sleep_ns){
+				sensor::timevalue rest_sleep(0,rest_sleep_ns);
+				nanosleep(rest_sleep);
+			}	
+		}
+
+
+	}
+
+
+
+
 	this->send_on_backchannel(CommandStatus::FINISHED);
-	
-	//this->notify();
 	_backchannel_listen_thread->join();
 	std::cout << "[END] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
 }

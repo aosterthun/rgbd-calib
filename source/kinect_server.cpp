@@ -8,7 +8,9 @@
 
 #include <KinectServer.hpp>
 
+#include <iostream>
+
 int main(int argc, const char * argv[]) {
-    KinectServer _server("141.54.147.108");
+    KinectServer _server("141.54.147.106");
     _server.start();
 }

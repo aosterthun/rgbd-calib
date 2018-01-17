@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-enum CommandStatus : int {NOT_A_FILE = 501, STARTED = 201, FINISHED = 202, STOP = 101, PAUSE = 102, PAUSED = 203, STOPED = 204};
+enum CommandStatus : int {NOT_A_FILE = 501, STARTED = 201, FINISHED = 202, STOP = 101, PAUSE = 102, UNPAUSE = 103, PAUSED = 203, UNPAUSED = 205, STOPED = 204};
 
 namespace boost {
 	namespace serialisation {
