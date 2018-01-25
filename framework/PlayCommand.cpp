@@ -31,7 +31,7 @@ void PlayCommand::listen_on_backchannel()
 {
  	std::cout << this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
 	this->zmq_sub_socket->connect(this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-	while (true) {
+	while (this->is_running) {
 		std::cout << "connected" << std::endl;
 		std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
 		
@@ -58,7 +58,11 @@ void PlayCommand::listen_on_backchannel()
 					std::cout << "[UNPAUSE]" << std::endl;
 					this->send_on_backchannel(CommandStatus::UNPAUSED);
 					break;
-					
+				case STOP:
+					this->is_running = false;
+					std::cout << "[STOP]" << std::endl;
+					this->send_on_backchannel(CommandStatus::STOPED);
+					break;
 				default:
 					std::cout << "[UNVALID COMMAND STATUS]" << std::endl;
 					break;
@@ -70,9 +74,16 @@ void PlayCommand::listen_on_backchannel()
 void PlayCommand::send_on_backchannel(const int _status)
 {
 	std::cout << "PlayCommand::send_on_backchannel(const int _status)" << std::endl;
+	std::cout <<  std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
 	this->zmq_pub_socket->bind("tcp://0.0.0.0:"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
+	std::cout <<  std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
+	std::cout << "connected" << std::endl;
 	sleep(1);
 	CommandStatus _cmd_status = static_cast<CommandStatus>(_status);
+/*
+	GenericMessage _msg;
+	_msg.set_type();*/
+
 	std::stringstream _cmd_status_stream;
 	boost::archive::text_oarchive _cmd_status_archive(_cmd_status_stream);
 	_cmd_status_archive << _cmd_status;
@@ -80,20 +91,30 @@ void PlayCommand::send_on_backchannel(const int _status)
 	zmq::message_t _cmd_status_msg(_cmd_status_msg_str.length());
 	memcpy(_cmd_status_msg.data(), _cmd_status_msg_str.data(), _cmd_status_msg_str.length());
 	this->zmq_pub_socket->send(_cmd_status_msg);
+	std::cout << "send"  << std::endl;
 
 	this->zmq_pub_socket->unbind("tcp://0.0.0.0:" + std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
+	
 	
 }
 
 std::vector<std::string> PlayCommand::get_backchannel_port(bool _seperated) {
+    //std::cout << "[START] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
+	this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
+	//std:: cout << "1" << std::endl;
     std::vector<std::string> _port;
     if(_seperated){
+    	//std:: cout << "2" << std::endl;
         size_t _first = this->cmd_backchannel_com_port.find(":");
-        _port.push_back(this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)));     
+        _port.push_back(this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)));
         _port.push_back(this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()));
+        //std::cout <<  this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)) << std::endl;
+        //std::cout <<  this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()) << std::endl;
     }else{
+    	//std:: cout << "3" << std::endl;
         _port.push_back(this->cmd_backchannel_com_port);
     }
+    //std::cout << "[END] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
     return _port;
 }
 
@@ -106,11 +127,11 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 	std::cout << "[START] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
     std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
     this->set_backchannel_com_port(_thread_event->get_data());
-    std::cout << "[FILENAME]: " << this->filename() << std::endl;
+    //std::cout << "[FILENAME]: " << this->filename() << std::endl;
 	std::shared_ptr<std::thread> _backchannel_listen_thread = std::make_shared<std::thread>(&PlayCommand::listen_on_backchannel,this);
 	this->send_on_backchannel(CommandStatus::STARTED);
 
-	std::cout << ZMQPortManager::get_instance().get_next_free_port() << std::endl;
+	//std::cout << ZMQPortManager::get_instance().get_next_free_port() << std::endl;
 
 
 
@@ -140,47 +161,48 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
 	#endif 
-	std::string endpoint("tcp://127.0.0.1:7000");
+	std::cout << this->cmd_server_address << std::endl;
+	std::string endpoint("tcp://"+ this->server_address() +":7000");
 	socket.bind(endpoint.c_str());
 
 	sensor::timevalue ts(sensor::clock::time());
 
 
-	while(true){
-		std::cout << this->is_running << std::endl;
-		while(this->is_running){
-			zmq::message_t zmqm((colorsize + depthsize) * num_kinect_cameras);
+		
+	while(this->is_running){
+		zmq::message_t zmqm((colorsize + depthsize) * num_kinect_cameras);
 
-			unsigned offset = 0;
-			for(unsigned i = 0; i < num_kinect_cameras; ++i){
-				fb.read((unsigned char*) zmqm.data() + offset, colorsize);
-				offset += colorsize;
-				fb.read((unsigned char*) zmqm.data() + offset, depthsize);
-				offset += depthsize;
-			}
-
-			// send frames
-			socket.send(zmqm);
-
-			// check if fps is correct
-			sensor::timevalue ts_now = sensor::clock::time();
-			long long time_spent_ns = (ts_now - ts).nsec();
-			long long rest_sleep_ns = min_frame_time_ns - time_spent_ns;
-			ts = ts_now;
-			if(0 < rest_sleep_ns){
-				sensor::timevalue rest_sleep(0,rest_sleep_ns);
-				nanosleep(rest_sleep);
-			}	
+		unsigned offset = 0;
+		for(unsigned i = 0; i < num_kinect_cameras; ++i){
+			fb.read((unsigned char*) zmqm.data() + offset, colorsize);
+			offset += colorsize;
+			fb.read((unsigned char*) zmqm.data() + offset, depthsize);
+			offset += depthsize;
 		}
 
+		// send frames
+		socket.send(zmqm);
 
+		// check if fps is correct
+		sensor::timevalue ts_now = sensor::clock::time();
+		long long time_spent_ns = (ts_now - ts).nsec();
+		long long rest_sleep_ns = min_frame_time_ns - time_spent_ns;
+		ts = ts_now;
+		if(0 < rest_sleep_ns){
+			sensor::timevalue rest_sleep(0,rest_sleep_ns);
+			nanosleep(rest_sleep);
+		}	
 	}
 
 
 
 
-	this->send_on_backchannel(CommandStatus::FINISHED);
+
+
+	std::cout << "TEST1" << std::endl;
 	_backchannel_listen_thread->join();
+	std::cout << "TEST2" << std::endl;
+	/*this->notify(std::make_shared<ThreadEvent>());*/
 	std::cout << "[END] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
 }
 

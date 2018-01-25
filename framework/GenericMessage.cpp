@@ -17,7 +17,7 @@ GenericMessage::GenericMessage(zmq::message_t* _msg)
     payload_.reserve(size_payload_byte_);
     memcpy((unsigned char*) payload_.c_str(), ((const unsigned char*)_msg->data()) + sizeof(int) + sizeof(unsigned), size_payload_byte_);
   
-    std::cout << "Payload: " << payload_.c_str() << std::endl;
+    //std::cout << "Payload: " << payload_.c_str() << std::endl;
 	/*this->set_type(type);
 	std::cout << this->type() << std::endl;
 	this->set_payload_size(size_payload_byte);

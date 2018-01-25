@@ -1,6 +1,8 @@
 #ifndef ZMQPortManager_hpp
 #define ZMQPortManager_hpp
 
+#include <mutex>
+#include <memory>
 class ZMQPortManager
 {
 public:
@@ -10,6 +12,7 @@ public:
 private:
   	unsigned next_free_port;
   	unsigned port_offset;
+  	std::mutex mutex;
 
 	ZMQPortManager()= default;
 	ZMQPortManager(unsigned _start_port);

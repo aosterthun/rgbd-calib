@@ -15,17 +15,18 @@
 #include <sstream>
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
-#include "ZMQMessageType.hpp"
-#include "Observable.hpp"
-#include "PlayCommand.hpp"
-#include "ZMQMessageEvent.hpp"
+#include <ZMQMessageType.hpp>
+#include <Observable.hpp>
+#include <PlayCommand.hpp>
+#include <RecordCommand.hpp>
+#include <ZMQMessageEvent.hpp>
 #include <AbstractObserver.hpp>
 #include <NotImplementedException.hpp>
 #include <ThreadEvent.hpp>
 #include <mutex>
 #include <GenericMessage.hpp>
 
-class ZMQMessageReceiver : public Observable , public AbstractObserver
+class ZMQMessageReceiver : public Observable , public AbstractObserver, public std::enable_shared_from_this<ZMQMessageReceiver>
 {
 private:
     std::string server;
@@ -37,7 +38,7 @@ private:
 public:
     ZMQMessageReceiver();
     void receive(std::string const &_server, std::shared_ptr<Event> _event, unsigned _unique_thread_id);
-    virtual void update(std::shared_ptr<Observable> _observable);
+    void update(std::shared_ptr<Observable> _observable);
     virtual void update(Observable* _observable);
     virtual void update(std::shared_ptr<Observable> _observable, std::shared_ptr<Event> _event);
     virtual void update(Observable* _observable, std::shared_ptr<Event> _event);

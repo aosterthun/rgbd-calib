@@ -87,11 +87,8 @@ void ZMQMessageResolver::resolve_message(std::shared_ptr<Event> _event, unsigned
 	boost::archive::text_iarchive _type_archive{_type_stream};
 	boost::archive::text_iarchive _cmd_archive{_cmd_stream};
 
-    std::cout << "1" << std::endl;
 	_type_archive >> _type;
-    std::cout << "2" << std::endl;
 	_cmd_archive & _cmd;
-    std::cout << "3" << std::endl;
 
     std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_zmq_event->get_event_message());
 	_cmd.execute(_thread_event);

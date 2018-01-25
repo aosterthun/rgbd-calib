@@ -11,6 +11,6 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    KinectServer _server("141.54.147.106");
+    KinectServer _server("141.54.147.108");
     _server.start();
 }

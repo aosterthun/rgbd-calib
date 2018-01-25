@@ -8,6 +8,7 @@
 #include <Observable.hpp>
 #include <KinectDaemonHandshake.hpp>
 #include <ThreadEvent.hpp>
+#include <ZMQPortManager.hpp>
 #include <zmq.hpp>
 #include <memory>
 

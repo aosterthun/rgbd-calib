@@ -33,7 +33,12 @@ void ZMQComManager::listen_for_new_connections() {
 
             sleep(1);
 
-            std::string com_port = this->serverport + ":8001";
+            std::cout << "get next free port" << std::endl;
+
+            unsigned next_free_port = ZMQPortManager::get_instance().get_next_free_port();
+
+            std::cout << "next_free_port: " << std::to_string(next_free_port) << std::endl;
+            std::string com_port = this->serverport + ":" + std::to_string(next_free_port);
 
             KinectDaemonHandshake _repl_handshake{};
             _repl_handshake.client_ip(com_port);
@@ -49,7 +54,7 @@ void ZMQComManager::listen_for_new_connections() {
             memcpy(_send_repl_handshake.data(), _repl_handshake_msg_str.data(), _repl_handshake_msg_str.size());
             _pub_skt->send(_send_repl_handshake);
 
-            std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_recv_handshake->client_ip()+":8001");
+            std::shared_ptr<ThreadEvent> _thread_event = std::make_shared<ThreadEvent>(_recv_handshake->client_ip()+":"+std::to_string(next_free_port));
             this->notify(_thread_event);
         }
     }
