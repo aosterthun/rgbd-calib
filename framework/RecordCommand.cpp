@@ -32,16 +32,16 @@ void RecordCommand::listen_on_backchannel()
 	//std:: cout << this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
 	while (this->is_running) {
 		std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
-		
+
 		if(this->zmq_sub_socket->recv(_msg.get()))
 		{
 			CommandStatus _status;
 			auto _cmd_string = std::string(static_cast<char*>(_msg->data()), _msg->size());
-			
+
 			std::stringstream _cmd_stream{_cmd_string};
-			
+
 			boost::archive::text_iarchive _cmd_archive{_cmd_stream};
-			
+
 			_cmd_archive >> _status;
 
 			switch (_status) {
@@ -82,12 +82,12 @@ void RecordCommand::send_on_backchannel(const int _status)
 	std::cout << "send"  << std::endl;
 
 	this->zmq_pub_socket->unbind("tcp://0.0.0.0:" + std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-	
+	sleep(1);
 }
 
 std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated) {
 	//std::cout << "[START] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
-	this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
+	//this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
 	//std:: cout << "1" << std::endl;
     std::vector<std::string> _port;
     if(_seperated){
@@ -116,10 +116,10 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
     std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
     this->set_backchannel_com_port(_thread_event->get_data());
 	std::shared_ptr<std::thread> _backchannel_listen_thread = std::make_shared<std::thread>(&RecordCommand::listen_on_backchannel,this);
-    
 
-	
-	
+
+
+
 	const unsigned colorsize = this->cmd_rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
 	const unsigned depthsize = 512 * 424 * sizeof(float);
 
@@ -138,7 +138,7 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
 	#else
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
-	#endif 
+	#endif
 	//std::cout << "Connect on " << this->cmd_server_address << std::endl;
 	std::string endpoint("tcp://" + this->cmd_server_address);
 	socket.connect(endpoint.c_str());
@@ -169,7 +169,7 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
 		std::cout << "remaining seconds: " << this->cmd_num_seconds_to_record - elapsed << std::endl;
 		if(this->cmd_num_seconds_to_record != 0){
 			if(elapsed > this->cmd_num_seconds_to_record)
-			this->is_running = false;	
+			this->is_running = false;
 		}
 		memcpy((char*) zmqm.data(), (const char*) &currtime, sizeof(double));
 

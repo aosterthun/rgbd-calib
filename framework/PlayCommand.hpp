@@ -48,7 +48,7 @@ private:
 	int cmd_endframe;
 
 
-	
+
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version){
@@ -58,6 +58,7 @@ private:
 		ar & cmd_max_fps;
 		ar & cmd_rgb_is_compressed;
 		ar & cmd_loop;
+		ar & cmd_backchannel_com_port;
 		ar & cmd_startframe;
 		ar & cmd_endframe;
 	}

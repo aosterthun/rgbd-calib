@@ -34,17 +34,17 @@ void PlayCommand::listen_on_backchannel()
 	while (this->is_running) {
 		std::cout << "connected" << std::endl;
 		std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
-		
+
 		if(this->zmq_sub_socket->recv(_msg.get()))
 		{
 			std::cout << "PlayCommand::listen_on_backchannel()" << std::endl;
 			CommandStatus _status;
 			auto _cmd_string = std::string(static_cast<char*>(_msg->data()), _msg->size());
-			
+
 			std::stringstream _cmd_stream{_cmd_string};
-			
+
 			boost::archive::text_iarchive _cmd_archive{_cmd_stream};
-			
+
 			_cmd_archive >> _status;
 
 			switch (_status) {
@@ -94,13 +94,13 @@ void PlayCommand::send_on_backchannel(const int _status)
 	std::cout << "send"  << std::endl;
 
 	this->zmq_pub_socket->unbind("tcp://0.0.0.0:" + std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-	
-	
+
+
 }
 
 std::vector<std::string> PlayCommand::get_backchannel_port(bool _seperated) {
     //std::cout << "[START] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
-	this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
+	//this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
 	//std:: cout << "1" << std::endl;
     std::vector<std::string> _port;
     if(_seperated){
@@ -125,8 +125,8 @@ void PlayCommand::set_backchannel_com_port(std::string const &_com_port) {
 void PlayCommand::execute(std::shared_ptr<Event> _event)
 {
 	std::cout << "[START] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
-    std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
-    this->set_backchannel_com_port(_thread_event->get_data());
+  std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
+  this->set_backchannel_com_port(_thread_event->get_data());
     //std::cout << "[FILENAME]: " << this->filename() << std::endl;
 	std::shared_ptr<std::thread> _backchannel_listen_thread = std::make_shared<std::thread>(&PlayCommand::listen_on_backchannel,this);
 	this->send_on_backchannel(CommandStatus::STARTED);
@@ -160,15 +160,15 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 	#else
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_SNDHWM,&hwm, sizeof(hwm));
-	#endif 
+	#endif
 	std::cout << this->cmd_server_address << std::endl;
-	std::string endpoint("tcp://"+ this->server_address() +":7000");
+	std::string endpoint("tcp://"+ this->server_address());
 	socket.bind(endpoint.c_str());
 
 	sensor::timevalue ts(sensor::clock::time());
 
 
-		
+
 	while(this->is_running){
 		zmq::message_t zmqm((colorsize + depthsize) * num_kinect_cameras);
 
@@ -191,18 +191,10 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 		if(0 < rest_sleep_ns){
 			sensor::timevalue rest_sleep(0,rest_sleep_ns);
 			nanosleep(rest_sleep);
-		}	
+		}
 	}
-
-
-
-
-
-
-	std::cout << "TEST1" << std::endl;
 	_backchannel_listen_thread->join();
-	std::cout << "TEST2" << std::endl;
-	/*this->notify(std::make_shared<ThreadEvent>());*/
+	socket.unbind("tcp://" + this->server_address());
 	std::cout << "[END] void PlayCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
 }
 
@@ -270,4 +262,3 @@ int PlayCommand::endframe() const
 {
 	return this->cmd_endframe;
 }
-
