@@ -17,11 +17,11 @@ PlayCommand::PlayCommand()
 
 	cmd_filename = "";
 	cmd_server_address = "";
-    cmd_backchannel_com_port = "";
-	cmd_num_kinect_cameras = 0;
-	cmd_max_fps = 0;
-	cmd_rgb_is_compressed = false;
-	cmd_loop = false;
+  cmd_backchannel_com_port = "";
+	cmd_num_kinect_cameras = 4;
+	cmd_max_fps = 20;
+	cmd_rgb_is_compressed = true;
+	cmd_loop = true;
 	cmd_startframe = 0;
 	cmd_endframe = 0;
 	this->is_running = true;
@@ -133,15 +133,9 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 
 	//std::cout << ZMQPortManager::get_instance().get_next_free_port() << std::endl;
 
+	unsigned min_frame_time_ns = 1000000000/cmd_max_fps;
 
-
-	unsigned num_kinect_cameras = 4;
-	bool rgb_is_compressed = true;
-	float max_fps = 20.0;
-
-	unsigned min_frame_time_ns = 1000000000/max_fps;
-
-	const unsigned colorsize = rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
+	const unsigned colorsize = cmd_rgb_is_compressed ? 691200 : 1280 * 1080 * 3;
 	const unsigned depthsize = 512 * 424 * sizeof(float);
 
 	FileBuffer fb(this->filename().c_str());
@@ -149,7 +143,7 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 		std::cerr << "error opening  exiting..." << std::endl;
 
 	}
-	fb.setLooping(true);
+	fb.setLooping(cmd_loop);
 
 
 	zmq::context_t ctx(1); // means single threaded
@@ -170,10 +164,10 @@ void PlayCommand::execute(std::shared_ptr<Event> _event)
 
 
 	while(this->is_running){
-		zmq::message_t zmqm((colorsize + depthsize) * num_kinect_cameras);
+		zmq::message_t zmqm((colorsize + depthsize) * cmd_num_kinect_cameras);
 
 		unsigned offset = 0;
-		for(unsigned i = 0; i < num_kinect_cameras; ++i){
+		for(unsigned i = 0; i < cmd_num_kinect_cameras; ++i){
 			fb.read((unsigned char*) zmqm.data() + offset, colorsize);
 			offset += colorsize;
 			fb.read((unsigned char*) zmqm.data() + offset, depthsize);
