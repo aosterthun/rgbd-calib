@@ -27,7 +27,7 @@ RecordCommand::RecordCommand()
 
 void RecordCommand::listen_on_backchannel()
 {
-	std::cout << "[START] void RecordCommand::listen_on_backchannel()" << std::endl;
+	//std::cout << "[START] void RecordCommand::listen_on_backchannel()" << std::endl;
 	this->zmq_sub_socket->connect(this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
 	//std:: cout << this->get_backchannel_port(true)[0]+":"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
 	while (this->is_running) {
@@ -46,11 +46,11 @@ void RecordCommand::listen_on_backchannel()
 
 			switch (_status) {
 				case PAUSE:
-					std::cout << "[PAUSE]" << std::endl;
+					//std::cout << "[PAUSE]" << std::endl;
 					this->send_on_backchannel(CommandStatus::PAUSED);
 					break;
 				case STOP:
-					std::cout << "[STOP]" << std::endl;
+					//std::cout << "[STOP]" << std::endl;
 					this->is_running = false;
 					this->send_on_backchannel(CommandStatus::STOPED);
 				default:
@@ -62,10 +62,10 @@ void RecordCommand::listen_on_backchannel()
 
 void RecordCommand::send_on_backchannel(const int _status)
 {
-	std::cout << "RecordCommand::send_on_backchannel(const int _status)" << std::endl;
+	//std::cout << "RecordCommand::send_on_backchannel(const int _status)" << std::endl;
 	this->zmq_pub_socket->bind("tcp://0.0.0.0:"+std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
-	std::cout <<  std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
-	std::cout << "connected" << std::endl;
+	//std::cout <<  std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)) << std::endl;
+	//std::cout << "connected" << std::endl;
 	sleep(1);
 	CommandStatus _cmd_status = static_cast<CommandStatus>(_status);
 /*
@@ -79,14 +79,14 @@ void RecordCommand::send_on_backchannel(const int _status)
 	zmq::message_t _cmd_status_msg(_cmd_status_msg_str.length());
 	memcpy(_cmd_status_msg.data(), _cmd_status_msg_str.data(), _cmd_status_msg_str.length());
 	this->zmq_pub_socket->send(_cmd_status_msg);
-	std::cout << "send"  << std::endl;
+	//std::cout << "send"  << std::endl;
 
 	this->zmq_pub_socket->unbind("tcp://0.0.0.0:" + std::to_string((std::stoi(this->get_backchannel_port(true)[1],nullptr) + 1)));
 	sleep(1);
 }
 
 std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated) {
-	//std::cout << "[START] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
+	////std::cout << "[START] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
 	//this->cmd_backchannel_com_port = "tcp://141.54.147.106:8001";
 	//std:: cout << "1" << std::endl;
     std::vector<std::string> _port;
@@ -95,13 +95,13 @@ std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated) {
         size_t _first = this->cmd_backchannel_com_port.find(":");
         _port.push_back(this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)));
         _port.push_back(this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()));
-        //std::cout <<  this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)) << std::endl;
-        //std::cout <<  this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()) << std::endl;
+        ////std::cout <<  this->cmd_backchannel_com_port.substr(0,this->cmd_backchannel_com_port.find(":",_first+1)) << std::endl;
+        ////std::cout <<  this->cmd_backchannel_com_port.substr(this->cmd_backchannel_com_port.find(":",_first+1)+1,this->cmd_backchannel_com_port.length()) << std::endl;
     }else{
     	//std:: cout << "3" << std::endl;
         _port.push_back(this->cmd_backchannel_com_port);
     }
-    //std::cout << "[END] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
+    ////std::cout << "[END] std::vector<std::string> RecordCommand::get_backchannel_port(bool _seperated)" << std::endl;
     return _port;
 }
 
@@ -111,7 +111,7 @@ void RecordCommand::set_backchannel_com_port(std::string const &_com_port) {
 
 void RecordCommand::execute(std::shared_ptr<Event> _event)
 {
-	std::cout << "[START] void RecordCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
+	//std::cout << "[START] void RecordCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
 
     std::shared_ptr<ThreadEvent> _thread_event = std::static_pointer_cast<ThreadEvent>(_event);
     this->set_backchannel_com_port(_thread_event->get_data());
@@ -139,23 +139,23 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
 	uint32_t hwm = 1;
 	socket.setsockopt(ZMQ_RCVHWM,&hwm, sizeof(hwm));
 	#endif
-	//std::cout << "Connect on " << this->cmd_server_address << std::endl;
+	////std::cout << "Connect on " << this->cmd_server_address << std::endl;
 	std::string endpoint("tcp://" + this->cmd_server_address);
 	socket.connect(endpoint.c_str());
 
-	//std::cout << "Connected" << std::endl;
-	//std::cout << std::to_string(this->cmd_num_kinect_cameras) << std::endl;
+	////std::cout << "Connected" << std::endl;
+	////std::cout << std::to_string(this->cmd_num_kinect_cameras) << std::endl;
 	while(this->cmd_wait_frames_to_before_start > 0){
 
 		zmq::message_t zmqm((colorsize + depthsize) * this->cmd_num_kinect_cameras);
 		socket.recv(&zmqm); // blocking
 
-		//std::cout << "countdown: " << this->cmd_wait_frames_to_before_start << std::endl;
+		////std::cout << "countdown: " << this->cmd_wait_frames_to_before_start << std::endl;
 
 		--this->cmd_wait_frames_to_before_start;
 	}
 
-	//std::cout << "START!!!!!!!!!!!!!!!!!!!!!!!!!!!!: " << std::endl;
+	////std::cout << "START!!!!!!!!!!!!!!!!!!!!!!!!!!!!: " << std::endl;
 
 	ChronoMeter cm;
 	const double starttime = cm.getTick();
@@ -166,7 +166,7 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
 
 		const double currtime = cm.getTick();
 		const double elapsed = currtime - starttime;
-		std::cout << "remaining seconds: " << this->cmd_num_seconds_to_record - elapsed << std::endl;
+		//std::cout << "remaining seconds: " << this->cmd_num_seconds_to_record - elapsed << std::endl;
 		if(this->cmd_num_seconds_to_record != 0){
 			if(elapsed > this->cmd_num_seconds_to_record)
 			this->is_running = false;
@@ -186,7 +186,7 @@ void RecordCommand::execute(std::shared_ptr<Event> _event)
 
 	//this->notify();
 	_backchannel_listen_thread->join();
-	std::cout << "[END] void RecordCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
+	//std::cout << "[END] void RecordCommand::execute(std::shared_ptr<Event> _event)" << std::endl;
 }
 
 ZMQMessageType RecordCommand::get_type() {

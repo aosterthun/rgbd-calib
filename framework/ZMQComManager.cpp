@@ -9,7 +9,7 @@ ZMQComManager::ZMQComManager(std::string const& _serverport){
 }
 
 void ZMQComManager::listen_for_new_connections() {
-    std::cout << "[START] void ZMQComManager::listen_for_new_connections()" << std::endl;
+    //std::cout << "[START] void ZMQComManager::listen_for_new_connections()" << std::endl;
     auto _ctx = std::make_shared<zmq::context_t>(1);
     auto _pub_skt = std::make_shared<zmq::socket_t>(*_ctx.get(), ZMQ_PUB);
     auto _sub_skt = std::make_shared<zmq::socket_t>(*_ctx.get(), ZMQ_SUB);
@@ -20,24 +20,24 @@ void ZMQComManager::listen_for_new_connections() {
     while(true){
         std::shared_ptr<zmq::message_t> _msg = std::make_shared<zmq::message_t>();
         if (_sub_skt->recv(_msg.get())) {
-            std::cout << "Received message" << std::endl;
+            //std::cout << "Received message" << std::endl;
             std::shared_ptr<KinectDaemonHandshake> _recv_handshake = std::make_shared<KinectDaemonHandshake>();
             auto _handshake_string = std::string(static_cast<char *>(_msg->data()), _msg->size());
             std::stringstream _handshake_stream(_handshake_string);
             boost::archive::text_iarchive _handshake_archive(_handshake_stream);
             _handshake_archive & *_recv_handshake.get();
-            std::cout << _recv_handshake->client_ip() << std::endl;
+            //std::cout << _recv_handshake->client_ip() << std::endl;
 
 
             _pub_skt->connect("tcp://" + _recv_handshake->client_ip() + ":8000");
 
             sleep(1);
 
-            std::cout << "get next free port" << std::endl;
+            //std::cout << "get next free port" << std::endl;
 
             unsigned next_free_port = ZMQPortManager::get_instance().get_next_free_port();
 
-            std::cout << "next_free_port: " << std::to_string(next_free_port) << std::endl;
+            //std::cout << "next_free_port: " << std::to_string(next_free_port) << std::endl;
             std::string com_port = this->serverport + ":" + std::to_string(next_free_port);
 
             KinectDaemonHandshake _repl_handshake{};
@@ -58,6 +58,6 @@ void ZMQComManager::listen_for_new_connections() {
             this->notify(_thread_event);
         }
     }
-    std::cout << "[END] void ZMQComManager::listen_for_new_connections()" << std::endl;
+    //std::cout << "[END] void ZMQComManager::listen_for_new_connections()" << std::endl;
 
 }
